@@ -1,0 +1,27 @@
+@extends('layouts.app')
+
+@section('title', config('app.name'))
+@section('description', 'Webnar - Your platform for webinars and live events.')
+
+@section('content')
+    @include('sections.hero-section', ['ctaHref' => url('/checkout')])
+    @include('sections.featured-in')
+    @include('sections.what-is-graphology')
+    @include('sections.card-with-image-left', ['ctaHref' => url('/checkout')])
+    @include('sections.what-you-will-learn')
+    @include('sections.how-graphology-works', ['bonusCtaHref' => url('/checkout')])
+    @include('sections.certificate-section', ['ctaHref' => url('/checkout')])
+    @include('sections.workshop-snapshots')
+    @include('sections.graphology-steps')
+    @include('sections.who-uses-graphology')
+
+    @include('sections.video-testimonials')
+    @include('sections.about-institute')
+    @include('sections.meet-trainer', ['ctaHref' => url('/checkout')])
+    @include('sections.certified-graphologist')
+    @include('sections.news-article')
+    @include('sections.testimonials')
+    @include('sections.value-stack', ['ctaHref' => url('/checkout')])
+    @include('sections.faq')
+    @include('sections.end-section', ['ctaHref' => url('/checkout')])
+@endsection
