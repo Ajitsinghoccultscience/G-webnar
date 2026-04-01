@@ -36,10 +36,10 @@
             <img src="{{ asset($underlineSvg) }}" alt="" class="mx-auto w-[157px] h-[14px]" aria-hidden="true">
         </div>
 
-        {{-- Testimonial cards: carousel on mobile, grid on md+ --}}
-        <x-ui.carousel variant="single" gridAt="xl">
+        {{-- Testimonial cards: carousel/slider on all screen sizes --}}
+        <x-ui.carousel variant="single" gridAt="none">
             @foreach($testimonials as $testimonial)
-                <x-ui.carousel-slide variant="single" gridAt="xl">
+                <x-ui.carousel-slide variant="single" gridAt="none">
                 <x-ui.card variant="white" class="flex flex-col h-full">
                     {{-- Large quotation mark --}}
                     <span class="text-5xl md:text-6xl font-serif text-neutral-b leading-none mb-4">"</span>

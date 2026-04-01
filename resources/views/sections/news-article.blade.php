@@ -24,9 +24,9 @@
             <img src="{{ asset($underlineSvg) }}" alt="" class="mx-auto w-[157px] h-[14px]" aria-hidden="true">
         </div>
 
-        <x-ui.carousel variant="single" gridAt="xl" gridCols="3" class="gap-4 md:gap-6 lg:gap-8">
+        <x-ui.carousel variant="single" gridAt="none" class="gap-4 md:gap-6 lg:gap-8">
             @foreach($images as $image)
-                <x-ui.carousel-slide variant="single" gridAt="xl" class="min-w-0">
+                <x-ui.carousel-slide variant="single" gridAt="none" class="min-w-0">
                     <div class="aspect-[479/338] rounded-[10px] overflow-hidden shadow-drop bg-white w-full">
                         <img src="{{ asset($image) }}" alt="" class="w-full h-full object-contain">
                     </div>

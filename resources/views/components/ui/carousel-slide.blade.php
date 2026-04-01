@@ -1,7 +1,7 @@
 @props([
     /*
      * Must match parent carousel: 'peek' = responsive widths, always scroll
-     * 'single' = one-at-a-time on mobile, grid item on sm+ or md+
+     * 'single' = one-at-a-time on mobile, grid item on sm+ or md+ (or always carousel if gridAt=none)
      */
     'variant' => 'single',
     'gridAt' => 'sm',
@@ -10,8 +10,9 @@
 
 @php
     $isPeek = $variant === 'peek';
+    $alwaysCarousel = ($gridAt ?? '') === 'none';
 
-    $gridResetClasses = !$isPeek
+    $gridResetClasses = !$isPeek && !$alwaysCarousel
         ? ($gridAt === 'xl'
             ? 'xl:shrink xl:w-full xl:min-w-0 xl:max-w-none'
             : ($gridAt === 'lg'

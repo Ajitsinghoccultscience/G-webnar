@@ -17,10 +17,10 @@
             <img src="{{ asset($underlineSvg) }}" alt="" class="mx-auto w-[157px] h-[14px]" aria-hidden="true">
         </div>
 
-        {{-- Video cards: carousel on mobile, grid on sm+ --}}
-        <x-ui.carousel variant="single" gridAt="xl">
+        {{-- Video cards: carousel/slider on all screen sizes --}}
+        <x-ui.carousel variant="single" gridAt="none">
             @foreach($videos as $video)
-                <x-ui.carousel-slide variant="single" gridAt="xl" class="rounded-xl border-2 border-accent-gold overflow-hidden bg-neutral-e aspect-[358/543] relative">
+                <x-ui.carousel-slide variant="single" gridAt="none" class="rounded-xl border-2 border-accent-gold overflow-hidden bg-neutral-e aspect-[358/543] relative">
                     @if(!empty($video['youtube_id']))
                         <iframe
                             src="https://www.youtube.com/embed/{{ $video['youtube_id'] }}"
