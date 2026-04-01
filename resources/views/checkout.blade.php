@@ -17,8 +17,8 @@
         </div>
 
         {{-- Form card --}}
-        <div class="max-w-[520px] mx-auto">
-            <x-ui.card variant="white" class="p-6 md:p-10 shadow-card">
+        <div class="max-w-[580px] lg:max-w-[640px] mx-auto">
+            <x-ui.card variant="white" class="p-6 md:p-10 lg:p-12 shadow-card">
                 {{-- Zoho form - keep all name attributes and structure for submission --}}
                 <form
                     action="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/JeyRozVuoPowoO_7MgXtRZUcfNwMSJEVJjh6vqrJp8I/htmlRecords/submit"
@@ -28,44 +28,47 @@
                     accept-charset="UTF-8"
                     enctype="multipart/form-data"
                     id="form"
-                    class="space-y-6"
+                    class="space-y-5 lg:space-y-7"
                 >
                     <input type="hidden" name="zf_referrer_name" value="">
                     <input type="hidden" name="zf_redirect_url" value="{{ url('/thankyou') }}">
                     <input type="hidden" name="zc_gad" value="">
 
-                    {{-- First Name --}}
-                    <div>
-                        <label for="Name_First" class="block text-content font-semibold text-neutral-b mb-2">
-                            First Name <span class="text-secondary">*</span>
-                        </label>
-                        <input
-                            type="text"
-                            name="Name_First"
-                            id="Name_First"
-                            maxlength="255"
-                            fieldType="7"
-                            required
-                            placeholder="Enter your first name"
-                            class="w-full h-12 px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
-                        >
-                        <p id="Name_error" class="text-sm text-secondary mt-1.5" style="display:none;">Please enter your first name.</p>
-                    </div>
+                    {{-- First Name & Last Name side-by-side on desktop --}}
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 lg:gap-6">
+                        {{-- First Name --}}
+                        <div>
+                            <label for="Name_First" class="block text-content font-semibold text-neutral-b mb-2">
+                                First Name <span class="text-secondary">*</span>
+                            </label>
+                            <input
+                                type="text"
+                                name="Name_First"
+                                id="Name_First"
+                                maxlength="255"
+                                fieldType="7"
+                                required
+                                placeholder="Enter your first name"
+                                class="w-full h-12 lg:h-[52px] px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
+                            >
+                            <p id="Name_error" class="text-sm text-secondary mt-1.5" style="display:none;">Please enter your first name.</p>
+                        </div>
 
-                    {{-- Last Name --}}
-                    <div>
-                        <label for="Name_Last" class="block text-content font-semibold text-neutral-b mb-2">
-                            Last Name
-                        </label>
-                        <input
-                            type="text"
-                            name="Name_Last"
-                            id="Name_Last"
-                            maxlength="255"
-                            fieldType="7"
-                            placeholder="Enter your last name"
-                            class="w-full h-12 px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
-                        >
+                        {{-- Last Name --}}
+                        <div>
+                            <label for="Name_Last" class="block text-content font-semibold text-neutral-b mb-2">
+                                Last Name
+                            </label>
+                            <input
+                                type="text"
+                                name="Name_Last"
+                                id="Name_Last"
+                                maxlength="255"
+                                fieldType="7"
+                                placeholder="Enter your last name"
+                                class="w-full h-12 lg:h-[52px] px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
+                            >
+                        </div>
                     </div>
 
                     {{-- Phone --}}
@@ -86,7 +89,7 @@
                             valType="number"
                             phoneFormatType="1"
                             placeholder="Enter your phone number"
-                            class="w-full h-12 px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
+                            class="w-full h-12 lg:h-[52px] px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
                         >
                         <p id="PhoneNumber_error" class="text-sm text-secondary mt-1.5" style="display:none;">Please enter a valid phone number.</p>
                     </div>
@@ -104,13 +107,13 @@
                             maxlength="255"
                             fieldType="9"
                             placeholder="Enter your email address"
-                            class="w-full h-12 px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
+                            class="w-full h-12 lg:h-[52px] px-4 rounded-10 border border-neutral-h bg-white text-neutral-b text-content placeholder:text-neutral-e/60 focus:border-accent-gold focus:ring-2 focus:ring-accent-gold/30 outline-none transition-all"
                         >
                         <p id="Email_error" class="text-sm text-secondary mt-1.5" style="display:none;">Please enter a valid email address.</p>
                     </div>
 
                     {{-- Submit --}}
-                    <div class="pt-2">
+                    <div class="pt-2 lg:pt-3">
                         <button
                             type="submit"
                             class="w-full h-[66px] md:h-[73px] inline-flex items-center justify-center font-bold text-content md:text-[1.25rem] tracking-[0.6px] rounded-lg bg-button-gradient text-neutral-b hover:opacity-95 transition-opacity focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-neutral-b"
