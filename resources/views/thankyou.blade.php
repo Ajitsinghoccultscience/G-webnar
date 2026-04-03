@@ -35,7 +35,7 @@
 
         {{-- WhatsApp CTA --}}
         <div class="flex flex-col items-center gap-3 w-full">
-            <p class="text-content font-semibold text-neutral-h uppercase tracking-[0.9px]">Next Step</p>
+            <p class="text-content font-semibold text-neutral-h uppercase tracking-[0.9px]"> Next Mandatory Step</p>
             <a href="https://chat.whatsapp.com/LhBcLhKuOTw5CpB7u0hsDt" target="_blank" rel="noopener noreferrer"
                class="inline-flex items-center justify-center gap-3 bg-[#25D366] hover:bg-[#1ebe5d] text-white font-bold text-base md:text-lg px-8 py-4 rounded-10 transition-colors duration-200 w-full sm:w-auto">
                 {{-- WhatsApp icon --}}
