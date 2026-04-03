@@ -124,40 +124,57 @@
 <div id="countdown-initial" data-days="{{ $countdown['days'] }}" data-hours="{{ $countdown['hours'] }}" data-min="{{ $countdown['min'] }}" data-sec="{{ $countdown['sec'] }}" class="hidden"></div>
 <script>
 (function() {
-    var daysEl = document.getElementById('countdown-days');
+    var daysEl  = document.getElementById('countdown-days');
     var hoursEl = document.getElementById('countdown-hours');
-    var minEl = document.getElementById('countdown-min');
-    var secEl = document.getElementById('countdown-sec');
-    var initEl = document.getElementById('countdown-initial');
+    var minEl   = document.getElementById('countdown-min');
+    var secEl   = document.getElementById('countdown-sec');
+    var initEl  = document.getElementById('countdown-initial');
     if (!daysEl || !hoursEl || !minEl || !secEl || !initEl) return;
+
     var initial = {
-        d: parseInt(initEl.dataset.days, 10) || 3,
+        d: parseInt(initEl.dataset.days,  10) || 3,
         h: parseInt(initEl.dataset.hours, 10) || 2,
-        m: parseInt(initEl.dataset.min, 10) || 15,
-        s: parseInt(initEl.dataset.sec, 10) || 6
+        m: parseInt(initEl.dataset.min,   10) || 15,
+        s: parseInt(initEl.dataset.sec,   10) || 6
     };
-    var left = { d: initial.d, h: initial.h, m: initial.m, s: initial.s };
+    var TOTAL = initial.d * 86400 + initial.h * 3600 + initial.m * 60 + initial.s;
+    var KEY   = 'vs_timer_end';
+
     function pad(n) { return (n < 10 ? '0' : '') + n; }
-    function update() {
-        daysEl.textContent = pad(left.d);
-        hoursEl.textContent = pad(left.h);
-        minEl.textContent = pad(left.m);
-        secEl.textContent = pad(left.s);
+
+    function getEndTime() {
+        var stored = localStorage.getItem(KEY);
+        var now    = Math.floor(Date.now() / 1000);
+        if (stored && parseInt(stored) > now) return parseInt(stored);
+        var end = now + TOTAL;
+        localStorage.setItem(KEY, end);
+        return end;
     }
+
+    var endTime = getEndTime();
+
     function tick() {
-        left.s--;
-        if (left.s < 0) { left.s = 59; left.m--; }
-        if (left.m < 0) { left.m = 59; left.h--; }
-        if (left.h < 0) { left.h = 23; left.d--; }
-        if (left.d < 0) {
-            left.d = initial.d;
-            left.h = initial.h;
-            left.m = initial.m;
-            left.s = initial.s;
+        var now       = Math.floor(Date.now() / 1000);
+        var remaining = endTime - now;
+
+        if (remaining <= 0) {
+            endTime = Math.floor(Date.now() / 1000) + TOTAL;
+            localStorage.setItem(KEY, endTime);
+            remaining = TOTAL;
         }
-        update();
+
+        var d = Math.floor(remaining / 86400);
+        var h = Math.floor((remaining % 86400) / 3600);
+        var m = Math.floor((remaining % 3600) / 60);
+        var s = remaining % 60;
+
+        daysEl.textContent  = pad(d);
+        hoursEl.textContent = pad(h);
+        minEl.textContent   = pad(m);
+        secEl.textContent   = pad(s);
     }
-    update();
+
+    tick();
     setInterval(tick, 1000);
 })();
 </script>

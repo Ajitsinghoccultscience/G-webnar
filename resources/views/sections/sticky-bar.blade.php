@@ -67,7 +67,7 @@
 <script>
 (function () {
     const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};
-    let remaining = TOTAL;
+    const KEY   = 'sb_timer_end';
 
     const elH = document.getElementById('sb-hours');
     const elM = document.getElementById('sb-mins');
@@ -75,18 +75,30 @@
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
+    function getEndTime() {
+        const stored = localStorage.getItem(KEY);
+        const now    = Math.floor(Date.now() / 1000);
+        if (stored && parseInt(stored) > now) return parseInt(stored);
+        const end = now + TOTAL;
+        localStorage.setItem(KEY, end);
+        return end;
+    }
+
+    let endTime = getEndTime();
+
     function tick() {
-        if (remaining <= 0) remaining = TOTAL;
+        const now       = Math.floor(Date.now() / 1000);
+        let   remaining = endTime - now;
 
-        const h = Math.floor(remaining / 3600);
-        const m = Math.floor((remaining % 3600) / 60);
-        const s = remaining % 60;
+        if (remaining <= 0) {
+            endTime = Math.floor(Date.now() / 1000) + TOTAL;
+            localStorage.setItem(KEY, endTime);
+            remaining = TOTAL;
+        }
 
-        elH.textContent = pad(h);
-        elM.textContent = pad(m);
-        elS.textContent = pad(s);
-
-        remaining--;
+        elH.textContent = pad(Math.floor(remaining / 3600));
+        elM.textContent = pad(Math.floor((remaining % 3600) / 60));
+        elS.textContent = pad(remaining % 60);
     }
 
     tick();
