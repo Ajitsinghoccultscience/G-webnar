@@ -1,11 +1,11 @@
 @props([
     'title' => 'MEGA GRAPHOLOGY WEBINAR',
-    'subtitle' => 'Lorem ipsum dolor sit amet consectetur. Tincidunt senectus vitae diam blandit a eu aliqu',
+    'subtitle' => 'Enroll in the best graphology course to predict someone's personality using their signature and way of writing.',
     'bullets' => [
-        'Lorem ipsum dolor sit amet consectetur',
-        'Lorem ipsum dolor sit amet consectetur',
-        'Lorem ipsum dolor sit amet consectetur',
-        'Lorem ipsum dolor sit amet consectetur',
+        'Analysis of various signature styles.',
+        'Able to predict someone's personality by their handwriting',
+        'Suggest the right changes in their writing and signature for improvements.',
+        'Tell if someone is faking their inner and outer personality.',
     ],
     'date' => 'Sat, 14 February, 2026',
     'time' => '11:00 AM',

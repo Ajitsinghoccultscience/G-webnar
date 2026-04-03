@@ -3,10 +3,10 @@
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'subheading' => 'All India Institute of Occult Science: Running Since March 2004',
     'bullets' => [
-        'Lorem ipsum orci malesuada amet montes lorem nec vitae sollicitudin nam ornare.',
-        'Lorem ipsum orci malesuada amet montes lorem nec vitae sollicitudin nam ornare.',
-        'Lorem ipsum orci malesuada amet montes lorem nec vitae sollicitudin nam ornare.',
-        'Lorem ipsum orci malesuada amet montes lorem nec vitae sollicitudin nam ornare.',
+        'One of the best leading institutes in India known for its occult education and training for its students.',
+        'Globally recognized certification in Astrology, Numerology, Graphalogy, Vastu Shastra, Palmistry, Akashic records, Palmistry and Reiki .',
+        'Many trained students from here are working as personal consultants or in big astrology firms.',
+        'Best students support 24/7 with recorded classes available for our students.',
     ],
     'image' => null,
 ])

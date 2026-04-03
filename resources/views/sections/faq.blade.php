@@ -3,23 +3,23 @@
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'items' => [
         [
-            'question' => 'Lorem Ipsum Dolor Sit Amet Consectetur. Porttitor Dictum Diam Viverra Iaculis Massa Porttitor Enim Turpis Imperdiet. Rhoncus Morbi',
+            'question' => 'What is Graphology and what will I learn to analyze?',
             'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
         ],
         [
-            'question' => 'Lorem Ipsum Dolor Sit Amet Consectetur. Porttitor Dictum Diam Viverra Iaculis Massa Porttitor Enim Turpis Imperdiet. Rhoncus Morbi',
+            'question' => 'How can Graphology be used in professional fields? ',
             'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
         ],
         [
-            'question' => 'Lorem Ipsum Dolor Sit Amet Consectetur. Porttitor Dictum Diam Viverra Iaculis Massa Porttitor Enim Turpis Imperdiet. Rhoncus Morbi',
+            'question' => 'What is Graphotherapy?',
             'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
         ],
         [
-            'question' => 'Lorem Ipsum Dolor Sit Amet Consectetur. Porttitor Dictum Diam Viverra Iaculis Massa Porttitor Enim Turpis Imperdiet. Rhoncus Morbi',
+            'question' => 'Can I identify criminal behavior through this course?',
             'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
         ],
         [
-            'question' => 'Lorem Ipsum Dolor Sit Amet Consectetur. Porttitor Dictum Diam Viverra Iaculis Massa Porttitor Enim Turpis Imperdiet. Rhoncus Morbi',
+            'question' => 'Will I receive a certificate for attending?',
             'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
         ],
     ],

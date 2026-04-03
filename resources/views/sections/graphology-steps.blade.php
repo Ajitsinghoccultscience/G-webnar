@@ -5,22 +5,22 @@
         [
             'name' => 'Analysis',
             'icon' => 'Analysis.svg',
-            'description' => 'Lorem ipsum dolor sit amet consectetur. Malesuada semper aliquet sed nunc sit maecenas. Justo dictumst vulputate',
+            'description' => 'You will be able to analyze various handwriting samples, various alphabets, signature styles and many other related things.',
         ],
         [
             'name' => 'Decode',
             'icon' => 'Decode.svg',
-            'description' => 'Lorem ipsum dolor sit amet consectetur. Malesuada semper aliquet sed nunc sit maecenas. Justo dictumst vulputate',
+            'description' => 'Decode the hidden personality, mood, emotions behind the handwriting. Know what kind of curve tells about personality.',
         ],
         [
             'name' => 'Understand',
             'icon' => 'Understand.svg',
-            'description' => 'Lorem ipsum dolor sit amet consectetur. Malesuada semper aliquet sed nunc sit maecenas. Justo dictumst vulputate',
+            'description' => 'You will be able to understand the patterns of writings done by criminals, non criminals, big officers , their mindset etc.',
         ],
         [
             'name' => 'Guidance',
             'icon' => 'Guidance.svg',
-            'description' => 'Lorem ipsum dolor sit amet consectetur. Malesuada semper aliquet sed nunc sit maecenas. Justo dictumst vulputate',
+            'description' => 'You will be able to guide people by asking them for changes in their writing, signature etc for good results in their life.',
         ],
     ],
 ])

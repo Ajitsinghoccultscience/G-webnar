@@ -1,5 +1,5 @@
 @props([
-    'title' => 'News & Articles',
+    'title' => 'Trusted By The Media',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'images' => [
         'images/graphology image/news article.webp',

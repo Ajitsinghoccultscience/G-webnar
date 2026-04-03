@@ -1,6 +1,6 @@
 @props([
     'title' => 'Certificate for participation',
-    'body' => 'Lorem ipsum dolor sit amet consectetur. Tincidunt senectus vitae diam blandit a eu aliqu.',
+    'body' => 'You will get a certificate of participation after attending the graphology live webinar, which you can use both personally and professionally.',
     'ctaHref' => '#',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'image' => 'images/graphology image/certificate.webp',

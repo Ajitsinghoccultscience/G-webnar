@@ -1,5 +1,5 @@
 @props([
-    'text' => 'Unlock the hidden secrets in handwriting at our exclusive Graphology Webinar and discover what every stroke reveals about personality, emotions, and potential.',
+    'text' => 'Unlock the hidden secrets in handwriting at our exclusive Graphology Webinar and discover what every stroke reveals about personality, emotions, and potential',
     'ctaText' => 'Enroll Now',
     'ctaHref' => '#',
 ])
