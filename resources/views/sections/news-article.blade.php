@@ -2,19 +2,12 @@
     'title' => 'Trusted By The Media',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'images' => [
-        'images/graphology image/news article.webp',
-        'images/graphology image/news article.webp',
-        'images/graphology image/news article.webp',
+        'images/assets desktop/news article 1.svg',
+        'images/assets desktop/news article 2.svg',
+        'images/assets desktop/news article 3.svg',
+        'images/assets desktop/news article 4.svg',
     ],
 ])
-
-@php
-    $images = $images ?? [
-        'images/graphology image/news article.webp',
-        'images/graphology image/news article.webp',
-        'images/graphology image/news article.webp',
-    ];
-@endphp
 
 <!-- <section class="w-full section-spacing bg-neutral-bg "> -->
 <section class="w-full section-spacing bg-white ">
@@ -28,7 +21,7 @@
             @foreach($images as $image)
                 <x-ui.carousel-slide variant="single" gridAt="none" class="min-w-0">
                     <div class="aspect-[479/338] rounded-[10px] overflow-hidden shadow-drop bg-white w-full">
-                        <img src="{{ asset($image) }}" alt="" class="w-full h-full object-contain">
+                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-contain">
                     </div>
                 </x-ui.carousel-slide>
             @endforeach

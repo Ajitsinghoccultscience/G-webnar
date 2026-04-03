@@ -2,13 +2,13 @@
     'title' => 'Value Stack',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'pricingItems' => [
-        ['label' => '2 Hour Live Training', 'price' => '₹499'],
-        ['label' => 'Practice Worksheet', 'price' => '₹199'],
-        ['label' => 'PDF Notes', 'price' => '₹99'],
-        ['label' => 'Bonus Material', 'price' => '₹499'],
+        ['label' => '2 Hour Live Training', 'price' => '₹379'],
+        ['label' => 'Practice Worksheet',   'price' => '₹149'],
+        ['label' => 'PDF Notes',            'price' => '₹79'],
+        ['label' => 'Bonus Material',       'price' => '₹392'],
     ],
-    'totalValue' => '₹1296',
-    'offerPrice' => '₹99',
+    'totalValue' => '₹999',
+    'offerPrice' => '₹49',
     'originalPrice' => '₹999',
     'ctaText' => 'Register Now',
     'ctaHref' => '#',
@@ -44,8 +44,8 @@
                             <div class="space-y-5">
                                 @foreach($pricingItems as $item)
                                     <div class="flex justify-between items-center">
-                                        <span class="text-content font-bold text-neutral-b">{{ $item['label'] }}</span>
-                                        <span class="text-content font-bold text-neutral-b">{{ $item['price'] }}</span>
+                                        <span class="text-content font-medium text-neutral-b">{{ $item['label'] }}</span>
+                                        <span class="text-content font-medium text-neutral-b ml-4 shrink-0">-&nbsp;&nbsp;{{ $item['price'] }}</span>
                                     </div>
                                 @endforeach
                             </div>

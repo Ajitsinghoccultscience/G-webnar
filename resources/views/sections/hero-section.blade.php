@@ -1,9 +1,9 @@
 @props([
     'title' => 'MEGA GRAPHOLOGY WEBINAR',
-    'subtitle' => 'Enroll in the best graphology course to predict someone's personality using their signature and way of writing.',
+    'subtitle' => "Enroll in the best graphology course to predict someone's personality using their signature and way of writing.",
     'bullets' => [
         'Analysis of various signature styles.',
-        'Able to predict someone's personality by their handwriting',
+        "Able to predict someone's personality by their handwriting",
         'Suggest the right changes in their writing and signature for improvements.',
         'Tell if someone is faking their inner and outer personality.',
     ],
@@ -12,7 +12,7 @@
     'duration' => '2 hours',
     'alumniCount' => '18k+',
     'rating' => '4.5/5 (8912 ratings)',
-    'videoPlaceholder' => 'images/graphology image/webinar schedule.webp',
+    'videoPlaceholder' => 'images/assets desktop/convo graphology1.webp',
     'ctaHref' => '#',
 ])
 
@@ -33,7 +33,7 @@ $iconsPath = 'images/icons';
 <h1 class="text-hero font-bold text-button-gradient uppercase tracking-wide text-center">{{ $title }}</h1>
 <div class="w-full aspect-[4/3] min-h-[14rem] bg-neutral-e rounded-10 overflow-hidden flex items-center justify-center">
     @if($videoPlaceholder)
-        <img src="{{ asset($videoPlaceholder) }}" alt="Webinar preview" class="w-full h-full object-cover" loading="lazy">
+        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $videoPlaceholder)))) }}" alt="Webinar preview" class="w-full h-full object-cover" loading="lazy">
     @else
         <div class="flex flex-col items-center justify-center gap-3 text-neutral-i/60">
             <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
@@ -49,10 +49,10 @@ $ratingCount = $ratingParts[1] ?? '';
 <div class="grid grid-cols-[1fr_auto_1fr] gap-0 items-center w-full">
 <div class="flex flex-col items-center justify-center gap-2 py-2">
 <div class="flex -space-x-3">
-<img src="{{ asset('images/users/u1.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u2.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u3.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u4.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Aryan_Mehta.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Priya_Sharma.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Rishika.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Vikram_Singh.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
 </div>
 <p class="text-neutral-i font-semibold text-center text-sm leading-tight">Join {{ $alumniCount }} Alumni<br>Network</p>
 </div>
@@ -67,7 +67,7 @@ $ratingCount = $ratingParts[1] ?? '';
 @foreach($bullets as $bullet)<li>{{ $bullet }}</li>@endforeach
 </ul>
 <x-ui.button :href="$ctaHref" variant="primary" :compact="true" class="w-full mb-4">
-    Reserve My Seat @₹99 <span class="line-through opacity-80 ml-1">₹999</span>
+    Reserve My Seat @₹49 <span class="line-through opacity-80 ml-1">₹999</span>
 </x-ui.button>
 <div class="border border-white/80 rounded-10 px-3 py-3 flex flex-nowrap items-center justify-center gap-3 overflow-x-auto scrollbar-hide">
 <div class="flex items-center gap-2 shrink-0"><img src="{{ asset($iconsPath.'/Date.svg') }}" class="w-3.5 h-3.5 shrink-0"><div><p class="text-xs text-neutral-i/80 uppercase leading-tight">Date</p><p class="font-semibold text-accent-gold-light text-xs whitespace-nowrap">{{ $date }}</p></div></div>
@@ -88,7 +88,7 @@ $ratingCount = $ratingParts[1] ?? '';
 @foreach($bullets as $bullet)<li>{{ $bullet }}</li>@endforeach
 </ul>
 <x-ui.button :href="$ctaHref" variant="primary" :compact="true" class="mb-8 !min-w-0">
-    Reserve My Seat @₹99 <span class="line-through opacity-80 ml-1">₹999</span>
+    Reserve My Seat @₹49 <span class="line-through opacity-80 ml-1">₹999</span>
 </x-ui.button>
 <div class="border border-white/80 rounded-10 px-4 py-4 flex flex-wrap items-center gap-5 w-fit">
 <div class="flex items-center gap-2"><img src="{{ asset($iconsPath.'/Date.svg') }}" class="w-3.5 h-3.5 shrink-0"><div><p class="text-xs text-neutral-i/80 uppercase">Date</p><p class="font-semibold text-accent-gold-light text-xs">{{ $date }}</p></div></div>
@@ -102,7 +102,7 @@ $ratingCount = $ratingParts[1] ?? '';
 <div class="flex flex-col gap-4">
 <div class="w-full aspect-[4/3] min-h-[22rem] bg-neutral-e rounded-10 overflow-hidden flex items-center justify-center">
     @if($videoPlaceholder)
-        <img src="{{ asset($videoPlaceholder) }}" alt="Webinar preview" class="w-full h-full object-cover" loading="lazy">
+        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $videoPlaceholder)))) }}" alt="Webinar preview" class="w-full h-full object-cover" loading="lazy">
     @else
         <div class="flex flex-col items-center justify-center gap-3 text-neutral-i/60">
             <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24"><path d="M21 19V5c0-1.1-.9-2-2-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2zM8.5 13.5l2.5 3.01L14.5 12l4.5 6H5l3.5-4.5z"/></svg>
@@ -112,10 +112,10 @@ $ratingCount = $ratingParts[1] ?? '';
 </div>
 <div class="flex flex-nowrap items-center gap-6">
 <div class="flex -space-x-3 shrink-0">
-<img src="{{ asset('images/users/u1.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u2.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u3.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
-<img src="{{ asset('images/users/u4.jpg') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Aryan_Mehta.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Priya_Sharma.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Rishika.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
+<img src="{{ asset('images/assets%20desktop/Vikram_Singh.avif') }}" alt="" class="w-9 h-9 rounded-full border-2 border-neutral-b object-cover">
 </div>
 <p class="text-neutral-i font-semibold whitespace-nowrap shrink-0">Join {{ $alumniCount }} Alumni Network</p>
 <div class="w-px h-6 bg-neutral-i/40 shrink-0"></div>

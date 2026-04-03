@@ -8,7 +8,7 @@
         'Many trained students from here are working as personal consultants or in big astrology firms.',
         'Best students support 24/7 with recorded classes available for our students.',
     ],
-    'image' => null,
+    'image' => 'images/assets desktop/full convo.webp',
 ])
 
 <section class="w-full section-spacing bg-white ">
@@ -23,7 +23,7 @@
             {{-- Left: Image / placeholder --}}
             <div class="w-full aspect-[16/9] lg:aspect-[2/1] rounded-xl overflow-hidden bg-[#E0E0E0] flex items-center justify-center">
                 @if($image)
-                    <img src="{{ asset($image) }}" alt="" class="w-full h-full object-cover">
+                    <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-cover">
                 @else
                     <div class="flex flex-col items-center justify-center gap-2 text-neutral-e">
                         <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">

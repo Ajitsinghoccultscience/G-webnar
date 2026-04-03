@@ -17,7 +17,7 @@
                     <p class="text-content text-neutral-b tracking-[0.48px] mb-8 hidden md:block">{{ $body }}</p>
                     <div class="hidden md:block">
                         <x-ui.button :href="$ctaHref" variant="dark" :compact="true" class="!min-w-0">
-                            Reserve My Seat @₹99 <span class="line-through opacity-80 ml-1">₹999</span>
+                            Reserve My Seat @₹49 <span class="line-through opacity-80 ml-1">₹999</span>
                         </x-ui.button>
                     </div>
                 </div>

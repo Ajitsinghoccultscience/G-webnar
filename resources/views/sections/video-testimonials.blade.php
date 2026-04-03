@@ -2,10 +2,10 @@
     'title' => 'Hear straight from our Alumni',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'videos' => [
-        ['youtube_id' => '', 'name' => 'Somya Tripati', 'attend_date' => 'Attend on 18-02-2026'],
-        ['youtube_id' => '', 'name' => 'Somya Tripati', 'attend_date' => 'Attend on 18-02-2026'],
-        ['youtube_id' => '', 'name' => 'Somya Tripati', 'attend_date' => 'Attend on 18-02-2026'],
-        ['youtube_id' => '', 'name' => 'Somya Tripati', 'attend_date' => 'Attend on 18-02-2026'],
+        ['youtube_id' => 'axtZW0V9Q4k', 'name' => 'Suraj Kumar',    'attend_date' => 'Graphology Student Review'],
+        ['youtube_id' => 'qzszXeqvW98', 'name' => 'Rajendra Kashyap','attend_date' => 'Graphology Review'],
+        ['youtube_id' => '_o0LxjuBI_8', 'name' => 'Anushka Mittal',  'attend_date' => 'Graphology Review'],
+        ['youtube_id' => 'kK5yimNZZqk', 'name' => 'Aman Madaan',     'attend_date' => 'Graphology Student Review'],
     ],
 ])
 
@@ -26,7 +26,8 @@
                             src="https://www.youtube.com/embed/{{ $video['youtube_id'] }}"
                             title="Testimonial from {{ $video['name'] }}"
                             class="absolute inset-0 w-full h-full"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
                             allowfullscreen
                         ></iframe>
                     @else

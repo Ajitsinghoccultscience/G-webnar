@@ -4,26 +4,38 @@
     'testimonials' => [
         [
             'quote' => 'This professional course completely transformed my understanding of the human mind. Learning signature analysis helped me identify hidden personality traits accurately. I highly recommend this program for every aspiring psychologist seeking deep behavioral insights.',
-            'name' => 'Aarav',
-            'avatar' => null,
+            'name' => 'Rohan Verma',
+            'avatar' => 'images/assets desktop/Rohan_Verma.avif',
             'rating' => 5,
         ],
         [
             'quote' => 'The pre-recorded sessions were incredibly detailed and flexible for my busy schedule. Exploring criminality in handwriting was fascinating. Now, I use graphotherapy techniques daily to help my clients overcome their negative behavioral patterns.',
-            'name' => 'Ishani',
-            'avatar' => null,
+            'name' => 'Ishika',
+            'avatar' => 'images/assets desktop/ishika.avif',
             'rating' => 5,
         ],
         [
             'quote' => 'I gained immense value from the Associate Degree Program levels. The experts provided deep insights into lowercase letter strokes. This cost-effective technique is truly a powerful tool for unlocking secrets of the written word.',
-            'name' => 'Rohan',
-            'avatar' => null,
+            'name' => 'Aryan Mehta',
+            'avatar' => 'images/assets desktop/Aryan_Mehta.avif',
             'rating' => 5,
         ],
         [
             'quote' => 'Studying various psychological theories alongside handwriting analysis provided a comprehensive learning experience. I can now write detailed graphological reports professionally. Enrolling in this online course was definitely the best decision for my career.',
-            'name' => 'Meera',
-            'avatar' => null,
+            'name' => 'Priya Sharma',
+            'avatar' => 'images/assets desktop/Priya_Sharma.avif',
+            'rating' => 5,
+        ],
+        [
+            'quote' => 'The graphology techniques taught here are practical and easy to apply. I was amazed at how accurately handwriting reveals personality. This course has given me a unique edge in my counseling practice.',
+            'name' => 'Rishika',
+            'avatar' => 'images/assets desktop/Rishika.avif',
+            'rating' => 5,
+        ],
+        [
+            'quote' => 'An eye-opening journey into the science of handwriting. The content was well-structured and the instructor made complex concepts very approachable. I now use graphotherapy with my students for remarkable results.',
+            'name' => 'Vikram Singh',
+            'avatar' => 'images/assets desktop/Vikram_Singh.avif',
             'rating' => 5,
         ],
     ],
@@ -53,7 +65,7 @@
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 rounded-full border border-neutral-h overflow-hidden shrink-0 bg-neutral-h/30 flex items-center justify-center">
                             @if($testimonial['avatar'])
-                                <img src="{{ $testimonial['avatar'] }}" alt="{{ $testimonial['name'] }}" class="w-full h-full object-cover">
+                                <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $testimonial['avatar'])))) }}" alt="{{ $testimonial['name'] }}" class="w-full h-full object-cover">
                             @else
                                 <span class="text-content font-semibold text-neutral-b">{{ substr($testimonial['name'], 0, 2) }}</span>
                             @endif

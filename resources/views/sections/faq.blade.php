@@ -4,23 +4,23 @@
     'items' => [
         [
             'question' => 'What is Graphology and what will I learn to analyze?',
-            'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
+            'answer' => "Graphology is the study of handwriting to understand the human mind. In this webinar, you will learn to analyze slant variations, margins, spacing, and lowercase letter strokes (like 'i' and 't') to decode a person's hidden personality, moods, and emotions.",
         ],
         [
             'question' => 'How can Graphology be used in professional fields? ',
-            'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
+            'answer' => "It is a versatile tool used by HR professionals for recruitment, FBI investigators to create behavioral profiles, and psychologists to uncover a patient’s subconscious conflicts. It is also used by judges in forensic cases to evaluate a defendant's mental state.",
         ],
         [
             'question' => 'What is Graphotherapy?',
-            'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
+            'answer' => "Graphotherapy is a corrective method where you suggest specific changes to a person’s handwriting or signature. This technique helps individuals overcome negative personality traits and habits, fostering personal growth and betterment.",
         ],
         [
             'question' => 'Can I identify criminal behavior through this course?',
-            'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
+            'answer' => " Yes. The curriculum includes studying the writing patterns of both criminals and non-criminals. You will learn to spot signs of deviance, aggression, and instability to build comprehensive psychological portraits.",
         ],
         [
             'question' => 'Will I receive a certificate for attending?',
-            'answer' => 'Lorem ipsum dolor sit amet consectetur. Porttitor dictum diam viverra iaculis massa porttitor enim turpis imperdiet. Rhoncus morbi.',
+            'answer' => "Yes. After attending the live webinar, you will receive a Certificate of Participation from the All India Institute of Occult Science, which can be utilized for both personal and professional advancement.",
         ],
     ],
 ])

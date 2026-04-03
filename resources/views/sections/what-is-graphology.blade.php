@@ -14,7 +14,7 @@
 ])
 
 {{-- Content with image section (Figma 455:52) - content left, image right --}}
-<section class="w-full section-spacing bg-white ">
+<section class="w-full section-spacing pb-10 md:pb-16 bg-white">
     <div class="max-w-[1200px] xl:max-w-[1400px] mx-auto section-px">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
             {{-- 1. Title - Mobile: first, centered. Desktop: left col --}}
@@ -27,7 +27,7 @@
             <div class="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
                 <div class="w-full max-w-[730px] aspect-[730/423] mx-auto lg:mx-0 lg:ml-auto rounded-10 overflow-hidden bg-neutral-e flex items-center justify-center">
                     @if($image)
-                        <img src="{{ $image }}" alt="" class="w-full h-full object-cover">
+                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-cover">
                     @else
                         <div class="flex flex-col items-center justify-center gap-2 text-neutral-h">
                             <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
