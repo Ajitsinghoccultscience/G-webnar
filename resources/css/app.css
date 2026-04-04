@@ -11,22 +11,22 @@
 
     /* Hero / Display - creates text-hero utility */
     --text-hero: 2.625rem; /* 42px */
-    --text-hero--line-height: 1;
+    --text-hero--line-height: 1.2;
     --tracking-hero: 0.125rem; /* 2px */
 
     /* Headings - creates text-heading utility */
     --text-heading: 1.875rem; /* 30px */
-    --text-heading--line-height: 1;
+    --text-heading--line-height: 1.2;
     --tracking-heading: 0.1875rem; /* 3px */
 
     /* Sub headings - creates text-subheading utility */
     --text-subheading: 1.25rem; /* 20px */
-    --text-subheading--line-height: 1;
+    --text-subheading--line-height: 1.2;
     --tracking-subheading: 0.1875rem; /* 3px */
 
     /* Content / Body - creates text-content utility */
     --text-content: 1rem; /* 16px */
-    --text-content--line-height: 1;
+    --text-content--line-height: 1.2;
     --tracking-content: 0.1875rem; /* 3px */
 
     /* Font weights */
