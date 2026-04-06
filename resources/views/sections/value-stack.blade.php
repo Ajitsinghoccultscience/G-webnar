@@ -82,25 +82,25 @@
                             <div class="flex items-center justify-center md:justify-start gap-3 md:gap-4 flex-wrap">
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
-                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-days">{{ $countdown['days'] }}</span>
+                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-days">--</span>
                                     </div>
                                     <span class="text-sm mt-2 font-bold text-button-gradient">Days</span>
                                 </div>
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
-                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-hours">{{ $countdown['hours'] }}</span>
+                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-hours">--</span>
                                     </div>
                                     <span class="text-sm mt-2 font-bold text-button-gradient">Hour</span>
                                 </div>
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
-                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-min">{{ $countdown['min'] }}</span>
+                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-min">--</span>
                                     </div>
                                     <span class="text-sm mt-2 font-bold text-button-gradient">Min</span>
                                 </div>
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
-                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-sec">{{ $countdown['sec'] }}</span>
+                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-sec">--</span>
                                     </div>
                                     <span class="text-sm mt-2 font-bold text-button-gradient">Sec</span>
                                 </div>
@@ -136,7 +136,11 @@
     function getEndTime() {
         var stored = localStorage.getItem(KEY);
         var now    = Math.floor(Date.now() / 1000);
-        if (stored && parseInt(stored) > now) return parseInt(stored);
+        if (stored) {
+            var val = parseInt(stored);
+            // Valid: in the future but not more than TOTAL seconds away
+            if (val > now && val <= now + TOTAL) return val;
+        }
         var end = now + TOTAL;
         localStorage.setItem(KEY, end);
         return end;

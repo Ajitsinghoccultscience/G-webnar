@@ -24,7 +24,7 @@
                 {{-- Hours --}}
                 <div class="flex flex-col items-center gap-0.5">
                     <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
-                        <span id="sb-hours" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">{{ str_pad($hours, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span id="sb-hours" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">--</span>
                     </div>
                     <span class="text-neutral-b text-[9px] md:text-xs font-medium leading-none">Hours</span>
                 </div>
@@ -34,7 +34,7 @@
                 {{-- Minutes --}}
                 <div class="flex flex-col items-center gap-0.5">
                     <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
-                        <span id="sb-mins" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">{{ str_pad($minutes, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span id="sb-mins" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">--</span>
                     </div>
                     <span class="text-neutral-b text-[9px] md:text-xs font-medium leading-none">Min</span>
                 </div>
@@ -44,7 +44,7 @@
                 {{-- Seconds --}}
                 <div class="flex flex-col items-center gap-0.5">
                     <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
-                        <span id="sb-secs" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">{{ str_pad($seconds, 2, '0', STR_PAD_LEFT) }}</span>
+                        <span id="sb-secs" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">--</span>
                     </div>
                     <span class="text-neutral-b text-[9px] md:text-xs font-medium leading-none">Sec</span>
                 </div>
@@ -75,7 +75,11 @@
     function getEndTime() {
         const stored = localStorage.getItem(KEY);
         const now = Math.floor(Date.now() / 1000);
-        if (stored && parseInt(stored) > now) return parseInt(stored);
+        if (stored) {
+            const val = parseInt(stored);
+            // Valid: in the future but not more than TOTAL seconds away
+            if (val > now && val <= now + TOTAL) return val;
+        }
         const end = now + TOTAL;
         localStorage.setItem(KEY, end);
         return end;
