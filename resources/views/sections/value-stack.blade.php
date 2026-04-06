@@ -18,7 +18,7 @@
         ['icon' => 'Pdf notes.svg', 'label' => 'PDF Notes'],
         ['icon' => 'Live Q&A.svg', 'label' => 'Live Q&A Access'],
     ],
-    'countdown' => ['days' => '03', 'hours' => '02', 'min' => '15', 'sec' => '06'],
+    'countdown' => ['days' => '00', 'hours' => '06', 'min' => '00', 'sec' => '00'],
     'bgImage' => 'images/graphology image/value.webp',
     'bgImageMobile' => 'images/graphology image/value stack.webp',
 ])
@@ -59,16 +59,7 @@
                                 </x-ui.button>
                             </div>
                         </x-ui.card>
-                        <div class="mt-6 text-left">
-                            <p class="text-content text-neutral-h">Secure Payment</p>
-                            <p class="mt-2 text-subheading font-bold text-white">Trusted By</p>
-                            <div class="flex justify-start gap-4 mt-4">
-                                <span class="w-12 h-12 rounded-full bg-white/20 border border-white/30 shrink-0"></span>
-                                <span class="w-12 h-12 rounded-full bg-white/20 border border-white/30 shrink-0"></span>
-                                <span class="w-12 h-12 rounded-full bg-white/20 border border-white/30 shrink-0"></span>
-                                <span class="w-12 h-12 rounded-full bg-white/20 border border-white/30 shrink-0"></span>
-                            </div>
-                        </div>
+                       
                     </div>
 
                     {{-- Right: Bonus Material + Countdown --}}
@@ -132,13 +123,13 @@
     if (!daysEl || !hoursEl || !minEl || !secEl || !initEl) return;
 
     var initial = {
-        d: parseInt(initEl.dataset.days,  10) || 3,
-        h: parseInt(initEl.dataset.hours, 10) || 2,
-        m: parseInt(initEl.dataset.min,   10) || 15,
-        s: parseInt(initEl.dataset.sec,   10) || 6
+        d: parseInt(initEl.dataset.days,  10) || 0,
+        h: parseInt(initEl.dataset.hours, 10) || 6,
+        m: parseInt(initEl.dataset.min,   10) || 0,
+        s: parseInt(initEl.dataset.sec,   10) || 0
     };
     var TOTAL = initial.d * 86400 + initial.h * 3600 + initial.m * 60 + initial.s;
-    var KEY   = 'vs_timer_end';
+    var KEY   = 'sb_timer_end';
 
     function pad(n) { return (n < 10 ? '0' : '') + n; }
 

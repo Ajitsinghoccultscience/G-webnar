@@ -3,8 +3,8 @@
     'ctaText' => 'Reserve My Seat @₹49',
     'seats'   => '7',
     'hours'   => 6,
-    'minutes' => 3,
-    'seconds' => 12,
+    'minutes' => 0,
+    'seconds' => 0,
 ])
 
 {{-- Sticky bottom offer bar --}}
@@ -65,27 +65,40 @@
 
 <script>
 (function () {
+    const KEY   = 'sb_timer_end';
     const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};
-    let remaining = TOTAL;
 
     const elH = document.getElementById('sb-hours');
     const elM = document.getElementById('sb-mins');
     const elS = document.getElementById('sb-secs');
 
+    function getEndTime() {
+        const stored = localStorage.getItem(KEY);
+        const now = Math.floor(Date.now() / 1000);
+        if (stored && parseInt(stored) > now) return parseInt(stored);
+        const end = now + TOTAL;
+        localStorage.setItem(KEY, end);
+        return end;
+    }
+
     function pad(n) { return String(n).padStart(2, '0'); }
 
-    function tick() {
-        if (remaining <= 0) remaining = TOTAL;
+    let endTime = getEndTime();
 
+    function tick() {
+        const now = Math.floor(Date.now() / 1000);
+        let remaining = endTime - now;
+        if (remaining <= 0) {
+            endTime = Math.floor(Date.now() / 1000) + TOTAL;
+            localStorage.setItem(KEY, endTime);
+            remaining = TOTAL;
+        }
         const h = Math.floor(remaining / 3600);
         const m = Math.floor((remaining % 3600) / 60);
         const s = remaining % 60;
-
         elH.textContent = pad(h);
         elM.textContent = pad(m);
         elS.textContent = pad(s);
-
-        remaining--;
     }
 
     tick();
