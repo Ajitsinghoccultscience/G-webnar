@@ -2,7 +2,7 @@
     'ctaHref' => '#',
     'ctaText' => 'Reserve My Seat @₹49',
     'seats'   => '7',
-    'hours'   => 48,
+    'hours'   => 6,
     'minutes' => 3,
     'seconds' => 12,
 ])
@@ -16,8 +16,7 @@
 
             {{-- Text --}}
             <div class="flex items-baseline gap-1.5 whitespace-nowrap">
-                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">OFFER ENDS IN</span>
-                <span class="text-neutral-b/80 text-xs md:text-sm leading-none">(Only {{ $seats }} seats are left)</span>
+                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">Early Bird Discount Ends In:</span>
             </div>
 
             {{-- Timer boxes --}}
@@ -67,7 +66,7 @@
 <script>
 (function () {
     const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};
-    const KEY   = 'sb_timer_end';
+    let remaining = TOTAL;
 
     const elH = document.getElementById('sb-hours');
     const elM = document.getElementById('sb-mins');
@@ -75,30 +74,18 @@
 
     function pad(n) { return String(n).padStart(2, '0'); }
 
-    function getEndTime() {
-        const stored = localStorage.getItem(KEY);
-        const now    = Math.floor(Date.now() / 1000);
-        if (stored && parseInt(stored) > now) return parseInt(stored);
-        const end = now + TOTAL;
-        localStorage.setItem(KEY, end);
-        return end;
-    }
-
-    let endTime = getEndTime();
-
     function tick() {
-        const now       = Math.floor(Date.now() / 1000);
-        let   remaining = endTime - now;
+        if (remaining <= 0) remaining = TOTAL;
 
-        if (remaining <= 0) {
-            endTime = Math.floor(Date.now() / 1000) + TOTAL;
-            localStorage.setItem(KEY, endTime);
-            remaining = TOTAL;
-        }
+        const h = Math.floor(remaining / 3600);
+        const m = Math.floor((remaining % 3600) / 60);
+        const s = remaining % 60;
 
-        elH.textContent = pad(Math.floor(remaining / 3600));
-        elM.textContent = pad(Math.floor((remaining % 3600) / 60));
-        elS.textContent = pad(remaining % 60);
+        elH.textContent = pad(h);
+        elM.textContent = pad(m);
+        elS.textContent = pad(s);
+
+        remaining--;
     }
 
     tick();

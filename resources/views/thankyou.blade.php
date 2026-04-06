@@ -4,6 +4,11 @@
 @section('description', 'Your webinar registration is complete.')
 
 @section('content')
+<script>
+    if (window.self !== window.top) {
+        window.top.location.href = '{{ url("/thankyou") }}';
+    }
+</script>
 {{-- Top cream bar --}}
 <div class="w-full h-[24px] bg-accent-cream"></div>
 

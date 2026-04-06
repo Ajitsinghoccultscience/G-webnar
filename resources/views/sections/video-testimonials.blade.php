@@ -2,10 +2,12 @@
     'title' => 'Hear straight from our Alumni',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'videos' => [
-        ['youtube_id' => 'axtZW0V9Q4k', 'name' => 'Suraj Kumar',    'attend_date' => 'Graphology Student Review'],
-        ['youtube_id' => 'qzszXeqvW98', 'name' => 'Rajendra Kashyap','attend_date' => 'Graphology Review'],
-        ['youtube_id' => '_o0LxjuBI_8', 'name' => 'Anushka Mittal',  'attend_date' => 'Graphology Review'],
-        ['youtube_id' => 'kK5yimNZZqk', 'name' => 'Aman Madaan',     'attend_date' => 'Graphology Student Review'],
+        ['youtube_id' => 'SMImDRJrCY0', 'name' => 'Alumni Review', 'attend_date' => ''],
+        ['youtube_id' => 'RI637QVE648', 'name' => 'Alumni Review', 'attend_date' => ''],
+        ['youtube_id' => 'mEcnaSkIVfY', 'name' => 'Alumni Review', 'attend_date' => ''],
+        ['youtube_id' => 'GW4WpHXgb_4', 'name' => 'Alumni Review', 'attend_date' => ''],
+        ['youtube_id' => 'o6lFa3_9oLg', 'name' => 'Alumni Review', 'attend_date' => ''],
+       
     ],
 ])
 
@@ -23,7 +25,7 @@
                 <x-ui.carousel-slide variant="single" gridAt="none" class="rounded-xl border-2 border-accent-gold overflow-hidden bg-neutral-e aspect-[358/543] relative">
                     @if(!empty($video['youtube_id']))
                         <iframe
-                            src="https://www.youtube.com/embed/{{ $video['youtube_id'] }}"
+                            src="https://www.youtube.com/embed/{{ $video['youtube_id'] }}?rel=0"
                             title="Testimonial from {{ $video['name'] }}"
                             class="absolute inset-0 w-full h-full"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
