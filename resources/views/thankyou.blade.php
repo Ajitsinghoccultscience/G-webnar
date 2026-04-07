@@ -5,9 +5,23 @@
 
 @section('content')
 <script>
-    if (window.self !== window.top) {
-        window.top.location.href = '{{ url("/thankyou") }}';
-    }
+    (function () {
+        var THANK_YOU_URL = '{{ url("/thankyou") }}';
+
+        // Method 1 — postMessage: signal the parent checkout page
+        if (window.parent && window.parent !== window) {
+            try {
+                window.parent.postMessage({ type: 'zoho_form_submitted' }, '*');
+            } catch (e) {}
+        }
+
+        // Method 2 — window.top: directly navigate the top frame
+        if (window.self !== window.top) {
+            try {
+                window.top.location.href = THANK_YOU_URL;
+            } catch (e) {}
+        }
+    })();
 </script>
 {{-- Top cream bar --}}
 <div class="w-full h-[24px] bg-accent-cream"></div>
