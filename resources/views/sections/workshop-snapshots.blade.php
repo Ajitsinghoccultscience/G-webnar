@@ -2,15 +2,12 @@
     'title' => "Last workshop's snapshots",
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'images' => [
-        'images/12.webp',
-        'images/13.webp',
+        'images/Untitled-1.webp',
+        'images/Untitled-2.webp',
     ],
 ])
 
 @php
-    $largeImage = $images[0] ?? 'images/12.webp';
-    $mediumImage = $images[1] ?? $images[0];
-    $smallImage = $images[2] ?? $images[1] ?? $images[0];
     $u = fn($p) => asset(implode('/', array_map('rawurlencode', explode('/', $p))));
 @endphp
 
@@ -47,24 +44,13 @@
             </div>
         </div>
 
-        {{-- DESKTOP: grid layout --}}
-        <div class="hidden lg:grid grid-cols-2 gap-3 items-start">
-            <div class="rounded-xl overflow-hidden lg:h-[26.25rem] shadow-drop">
-                <img src="{{ $u($largeImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
+        {{-- DESKTOP: 2-column side-by-side --}}
+        <div class="hidden lg:grid grid-cols-2 gap-4 items-stretch">
+            @foreach($images as $img)
+            <div class="rounded-xl overflow-hidden shadow-drop aspect-video">
+                <img src="{{ $u($img) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
             </div>
-            <div class="grid grid-rows-2 gap-3">
-                <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                    <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
-                </div>
-                <div class="grid grid-cols-2 gap-3">
-                    <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                        <img src="{{ $u($smallImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                    <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                        <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
