@@ -21,7 +21,7 @@
             @foreach($images as $image)
                 <x-ui.carousel-slide variant="single" gridAt="none" class="min-w-0">
                     <div class="aspect-[479/338] rounded-[10px] overflow-hidden shadow-drop bg-white w-full">
-                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-contain">
+                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-contain" loading="lazy">
                     </div>
                 </x-ui.carousel-slide>
             @endforeach

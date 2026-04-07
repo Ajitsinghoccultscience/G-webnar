@@ -63,7 +63,7 @@
 {{-- Push page content above the sticky bar --}}
 <div class="h-[76px] md:h-[80px]"></div>
 
-<script>
+<script defer>
 (function () {
     const KEY   = 'sb_timer_end';
     const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};

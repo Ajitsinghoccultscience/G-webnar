@@ -19,7 +19,8 @@
                 <div class="flex justify-center">
                     <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}"
                          alt="Certificate of participation"
-                         class="w-full max-w-[320px] h-auto object-contain rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)]">
+                         class="w-full max-w-[320px] h-auto object-contain rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)]"
+                         loading="lazy">
                 </div>
                 <p class="text-content text-neutral-b tracking-[0.48px] text-center">{{ $body }}</p>
                 <div class="flex justify-center">
@@ -42,7 +43,8 @@
                 <div class="flex items-center justify-center">
                     <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}"
                          alt="Certificate of participation"
-                         class="w-full max-w-[420px] h-auto object-contain rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)] hover:scale-105 transition-transform duration-300">
+                         class="w-full max-w-[420px] h-auto object-contain rounded-xl shadow-[0_8px_32px_rgba(0,0,0,0.18)] hover:scale-105 transition-transform duration-300"
+                         loading="lazy">
                 </div>
             </div>
         </x-ui.card>

@@ -27,7 +27,7 @@
                 <div id="snapshot-track" class="flex transition-transform duration-500 ease-in-out">
                     @foreach($images as $img)
                         <div class="w-full shrink-0 aspect-video">
-                            <img src="{{ $u($img) }}" alt="Workshop snapshot" class="w-full h-full object-cover rounded-xl shadow-drop">
+                            <img src="{{ $u($img) }}" alt="Workshop snapshot" class="w-full h-full object-cover rounded-xl shadow-drop" loading="lazy">
                         </div>
                     @endforeach
                 </div>
@@ -50,18 +50,18 @@
         {{-- DESKTOP: grid layout --}}
         <div class="hidden lg:grid grid-cols-2 gap-3 items-start">
             <div class="rounded-xl overflow-hidden lg:h-[26.25rem] shadow-drop">
-                <img src="{{ $u($largeImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover">
+                <img src="{{ $u($largeImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
             </div>
             <div class="grid grid-rows-2 gap-3">
                 <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                    <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover">
+                    <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
                 </div>
                 <div class="grid grid-cols-2 gap-3">
                     <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                        <img src="{{ $u($smallImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover">
+                        <img src="{{ $u($smallImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
                     </div>
                     <div class="rounded-xl overflow-hidden aspect-video shadow-drop">
-                        <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover">
+                        <img src="{{ $u($mediumImage) }}" alt="Workshop snapshot" class="w-full h-full object-cover" loading="lazy">
                     </div>
                 </div>
             </div>

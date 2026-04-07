@@ -65,7 +65,7 @@
                     <div class="flex items-center gap-3">
                         <div class="w-12 h-12 rounded-full border border-neutral-h overflow-hidden shrink-0 bg-neutral-h/30 flex items-center justify-center">
                             @if($testimonial['avatar'])
-                                <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $testimonial['avatar'])))) }}" alt="{{ $testimonial['name'] }}" class="w-full h-full object-cover">
+                                <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $testimonial['avatar'])))) }}" alt="{{ $testimonial['name'] }}" class="w-full h-full object-cover" loading="lazy">
                             @else
                                 <span class="text-content font-semibold text-neutral-b">{{ substr($testimonial['name'], 0, 2) }}</span>
                             @endif

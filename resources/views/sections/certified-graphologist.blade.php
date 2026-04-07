@@ -29,7 +29,7 @@
                 @foreach($images as $image)
                     <div class="flex-[0_0_100%] sm:flex-[0_0_calc(50%-1rem)] snap-center shrink-0">
                         <div class="rounded-xl overflow-hidden w-full max-w-[732px] aspect-[4/3] sm:aspect-[732/341] mx-auto shadow-drop bg-white">
-                            <img src="{{ asset($image) }}" alt="Event snapshot" class="w-full h-full object-cover">
+                            <img src="{{ asset($image) }}" alt="Event snapshot" class="w-full h-full object-cover" loading="lazy">
                         </div>
                     </div>
                 @endforeach
@@ -60,7 +60,7 @@
             </button>
         </div>
 
-        <script>
+        <script defer>
             window.graphologistCarousel = {
                 slideWidth: 400,
                 next() {

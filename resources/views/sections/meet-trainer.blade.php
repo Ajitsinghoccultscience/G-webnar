@@ -31,7 +31,7 @@
 
                     {{-- Trainer image (full, uncropped) --}}
                     <div class="flex justify-center mb-6">
-                        <img src="{{ asset($image) }}" alt="{{ $trainerName }}" class="w-full max-w-[280px] object-contain shrink-0" width="280">
+                        <img src="{{ asset($image) }}" alt="{{ $trainerName }}" class="w-full max-w-[280px] object-contain shrink-0" width="280" loading="lazy">
                     </div>
 
                     {{-- Name & profession centered --}}
@@ -57,7 +57,7 @@
             <div class="hidden lg:grid lg:grid-cols-[400px_1fr] gap-0 h-full">
                     {{-- Left: Trainer image --}}
                     <div class="flex items-center justify-center p-8 pb-8">
-                        <img src="{{ asset($image) }}" alt="{{ $trainerName }}" class="w-full max-w-[338px] h-[332px] object-contain" width="338" height="332">
+                        <img src="{{ asset($image) }}" alt="{{ $trainerName }}" class="w-full max-w-[338px] h-[332px] object-contain" width="338" height="332" loading="lazy">
                     </div>
 
                     {{-- Right: Content --}}

@@ -27,7 +27,7 @@
             <div class="order-2 lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
                 <div class="w-full max-w-[730px] aspect-[730/423] mx-auto lg:mx-0 lg:ml-auto rounded-10 overflow-hidden bg-neutral-e flex items-center justify-center">
                     @if($image)
-                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-cover">
+                        <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-cover" loading="lazy">
                     @else
                         <div class="flex flex-col items-center justify-center gap-2 text-neutral-h">
                             <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">

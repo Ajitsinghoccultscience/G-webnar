@@ -113,7 +113,7 @@
     </div>
 </section>
 <div id="countdown-initial" data-days="{{ $countdown['days'] }}" data-hours="{{ $countdown['hours'] }}" data-min="{{ $countdown['min'] }}" data-sec="{{ $countdown['sec'] }}" class="hidden"></div>
-<script>
+<script defer>
 (function() {
     var daysEl  = document.getElementById('countdown-days');
     var hoursEl = document.getElementById('countdown-hours');

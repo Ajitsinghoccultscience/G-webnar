@@ -17,7 +17,7 @@
             {{-- Left: Image --}}
             <div class="w-full aspect-square max-h-[420px] bg-white rounded-10 overflow-hidden flex items-center justify-center">
                 @if($image)
-                    <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-contain p-4">
+                    <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $image)))) }}" alt="" class="w-full h-full object-contain p-4" loading="lazy">
                 @else
                     <div class="flex flex-col items-center justify-center gap-2 text-neutral-e p-8">
                         <svg class="w-16 h-16" fill="currentColor" viewBox="0 0 24 24">
@@ -73,7 +73,8 @@
                     @if(!empty($evidence['image']))
                         <img src="{{ asset(implode('/', array_map('rawurlencode', explode('/', $evidence['image'])))) }}"
                              alt="{{ $evidence['name'] ?? '' }}"
-                             class="w-full h-auto rounded-10 object-contain">
+                             class="w-full h-auto rounded-10 object-contain"
+                             loading="lazy">
                     @else
                         <span class="text-neutral-e text-xs italic">Handwriting sample</span>
                     @endif
