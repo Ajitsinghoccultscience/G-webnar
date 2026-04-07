@@ -4,32 +4,16 @@
 @section('description', 'Register for the Mega Graphology Webinar - Reserve your seat now.')
 
 @section('content')
-<div class="w-full h-[24px] bg-accent-cream"></div>
-
-<section class="w-full bg-neutral-b py-10 md:py-16">
-    <div class="max-w-[860px] mx-auto section-px">
-        <h1 class="text-center text-2xl md:text-3xl font-bold text-white mb-2 uppercase tracking-wide">
-            Reserve Your Seat
-        </h1>
-        <p class="text-center text-accent-gold-light text-base mb-8">
-            Fill in your details below to register for the Mega Graphology Webinar.
-        </p>
-
-        {{-- Iframe wrapper: hides inner scrollbar, stretches full width --}}
-        <div class="w-full overflow-hidden rounded-10 shadow-xl">
-            <iframe
-                id="zoho-form-iframe"
-                src="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/G5-sJzQY1LJXGwjhhOK6RpOrPD680Uc6NMOQhg1Yv88"
-                width="100%"
-                frameborder="0"
-                scrolling="no"
-                allow="geolocation; microphone; camera"
-                style="min-height: 700px; border: none; display: block; transition: height 0.2s ease;"
-                title="Webinar Registration Form"
-            ></iframe>
-        </div>
-    </div>
-</section>
+<iframe
+    id="zoho-form-iframe"
+    src="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/G5-sJzQY1LJXGwjhhOK6RpOrPD680Uc6NMOQhg1Yv88"
+    width="100%"
+    frameborder="0"
+    scrolling="no"
+    allow="geolocation; microphone; camera"
+    style="height: 1200px; border: none; display: block;"
+    title="Webinar Registration Form"
+></iframe>
 @endsection
 
 @push('scripts')
