@@ -3,11 +3,11 @@
     'underlineWord' => 'graphologist',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'images' => [
-     'images/assets desktop/convoo (1).webp', 
-        'images/assets desktop/convo graphology1.webp',
-         'images/graphology image/event 1.webp',
+        'images/DESKTOP ASSESTS/Grap1.webp',
+        'images/DESKTOP ASSESTS/Grap3.webp',
+        'images/DESKTOP ASSESTS/Grap4.webp',
         'images/graphology image/event 2.webp',
-        'images/graphology image/event 3.webp',
+        
     ],
 ])
 
