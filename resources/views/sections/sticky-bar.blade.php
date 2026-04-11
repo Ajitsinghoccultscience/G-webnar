@@ -65,7 +65,7 @@
 
 <script defer>
 (function () {
-    const KEY   = 'sb_timer_end';
+    const KEY   = 'reg_timer_end_52';
     const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};
 
     const elH = document.getElementById('sb-hours');

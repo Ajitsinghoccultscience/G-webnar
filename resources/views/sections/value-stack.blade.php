@@ -129,7 +129,7 @@
         s: parseInt(initEl.dataset.sec,   10) || 0
     };
     var TOTAL = initial.d * 86400 + initial.h * 3600 + initial.m * 60 + initial.s;
-    var KEY   = 'sb_timer_end';
+    var KEY   = 'reg_timer_end_52';
 
     function pad(n) { return (n < 10 ? '0' : '') + n; }
 
