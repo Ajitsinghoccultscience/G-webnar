@@ -2,8 +2,8 @@
     'ctaHref' => '#',
     'ctaText' => 'Reserve My Seat @₹49',
     'seats'   => '7',
-    'hours'   => 6,
-    'minutes' => 0,
+    'hours'   => 0,
+    'minutes' => 52,
     'seconds' => 0,
 ])
 
@@ -16,7 +16,7 @@
 
             {{-- Text --}}
             <div class="flex items-baseline gap-1.5 whitespace-nowrap">
-                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">Early Bird Discount Ends In:</span>
+                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">Registration Closes in 52 Minutes!</span>
             </div>
 
             {{-- Timer boxes --}}
