@@ -1,9 +1,9 @@
 @props([
     'ctaHref' => '#',
     'ctaText' => 'Reserve My Seat @₹49',
-    'seats'   => '7',
+    'days'    => 4,
     'hours'   => 0,
-    'minutes' => 52,
+    'minutes' => 0,
     'seconds' => 0,
 ])
 
@@ -16,11 +16,21 @@
 
             {{-- Text --}}
             <div class="flex items-baseline gap-1.5 whitespace-nowrap">
-                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">Registration Closes in 52 Minutes!</span>
+                <span class="font-bold text-neutral-b text-xs md:text-base uppercase tracking-wide leading-none">Early Bird Offer Ends In:</span>
             </div>
 
             {{-- Timer boxes --}}
             <div class="flex items-end gap-1">
+                {{-- Days --}}
+                <div class="flex flex-col items-center gap-0.5">
+                    <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
+                        <span id="sb-days" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">--</span>
+                    </div>
+                    <span class="text-neutral-b text-[9px] md:text-xs font-medium leading-none">Days</span>
+                </div>
+
+                <span class="text-neutral-b font-bold text-base md:text-2xl mb-3 leading-none">:</span>
+
                 {{-- Hours --}}
                 <div class="flex flex-col items-center gap-0.5">
                     <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
@@ -65,44 +75,43 @@
 
 <script defer>
 (function () {
-    const KEY   = 'reg_timer_end_52';
-    const TOTAL = {{ ($hours * 3600) + ($minutes * 60) + $seconds }};
+    var TOTAL = {{ ($days * 86400) + ($hours * 3600) + ($minutes * 60) + $seconds }};
+    // Key includes TOTAL so changing days/hours in props resets timer for all visitors
+    var KEY = 'sb_timer_end_' + TOTAL;
 
-    const elH = document.getElementById('sb-hours');
-    const elM = document.getElementById('sb-mins');
-    const elS = document.getElementById('sb-secs');
+    var elD = document.getElementById('sb-days');
+    var elH = document.getElementById('sb-hours');
+    var elM = document.getElementById('sb-mins');
+    var elS = document.getElementById('sb-secs');
+
+    function pad(n) { return String(n).padStart(2, '0'); }
 
     function getEndTime() {
-        const stored = localStorage.getItem(KEY);
-        const now = Math.floor(Date.now() / 1000);
+        var stored = localStorage.getItem(KEY);
+        var now = Math.floor(Date.now() / 1000);
         if (stored) {
-            const val = parseInt(stored);
-            // Valid: in the future but not more than TOTAL seconds away
+            var val = parseInt(stored);
             if (val > now && val <= now + TOTAL) return val;
         }
-        const end = now + TOTAL;
+        var end = now + TOTAL;
         localStorage.setItem(KEY, end);
         return end;
     }
 
-    function pad(n) { return String(n).padStart(2, '0'); }
-
-    let endTime = getEndTime();
+    var endTime = getEndTime();
 
     function tick() {
-        const now = Math.floor(Date.now() / 1000);
-        let remaining = endTime - now;
+        var now = Math.floor(Date.now() / 1000);
+        var remaining = endTime - now;
         if (remaining <= 0) {
-            endTime = Math.floor(Date.now() / 1000) + TOTAL;
+            endTime = now + TOTAL;
             localStorage.setItem(KEY, endTime);
             remaining = TOTAL;
         }
-        const h = Math.floor(remaining / 3600);
-        const m = Math.floor((remaining % 3600) / 60);
-        const s = remaining % 60;
-        elH.textContent = pad(h);
-        elM.textContent = pad(m);
-        elS.textContent = pad(s);
+        elD.textContent = pad(Math.floor(remaining / 86400));
+        elH.textContent = pad(Math.floor((remaining % 86400) / 3600));
+        elM.textContent = pad(Math.floor((remaining % 3600) / 60));
+        elS.textContent = pad(remaining % 60);
     }
 
     tick();

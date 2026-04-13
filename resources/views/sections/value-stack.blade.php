@@ -18,7 +18,7 @@
         ['icon' => 'Pdf notes.svg', 'label' => 'PDF Notes'],
         ['icon' => 'Live Q&A.svg', 'label' => 'Live Q&A Access'],
     ],
-    'countdown' => ['days' => '00', 'hours' => '00', 'min' => '52', 'sec' => '00'],
+    'countdown' => ['days' => '04', 'hours' => '00', 'min' => '00', 'sec' => '00'],
     'bgImage' => 'images/graphology image/value.webp',
     'bgImageMobile' => 'images/graphology image/value stack.webp',
 ])
@@ -122,23 +122,22 @@
     var initEl  = document.getElementById('countdown-initial');
     if (!daysEl || !hoursEl || !minEl || !secEl || !initEl) return;
 
-    var initial = {
-        d: parseInt(initEl.dataset.days,  10) || 0,
-        h: parseInt(initEl.dataset.hours, 10) || 6,
-        m: parseInt(initEl.dataset.min,   10) || 0,
-        s: parseInt(initEl.dataset.sec,   10) || 0
-    };
-    var TOTAL = initial.d * 86400 + initial.h * 3600 + initial.m * 60 + initial.s;
-    var KEY   = 'reg_timer_end_52';
+    var d0 = parseInt(initEl.dataset.days,  10) || 0;
+    var h0 = parseInt(initEl.dataset.hours, 10) || 0;
+    var m0 = parseInt(initEl.dataset.min,   10) || 0;
+    var s0 = parseInt(initEl.dataset.sec,   10) || 0;
+    var TOTAL = d0 * 86400 + h0 * 3600 + m0 * 60 + s0;
 
-    function pad(n) { return (n < 10 ? '0' : '') + n; }
+    // Key includes TOTAL so changing props forces a fresh timer for all visitors
+    var KEY = 'vs_timer_end_' + TOTAL;
+
+    function pad(n) { return String(n).padStart(2, '0'); }
 
     function getEndTime() {
         var stored = localStorage.getItem(KEY);
-        var now    = Math.floor(Date.now() / 1000);
+        var now = Math.floor(Date.now() / 1000);
         if (stored) {
             var val = parseInt(stored);
-            // Valid: in the future but not more than TOTAL seconds away
             if (val > now && val <= now + TOTAL) return val;
         }
         var end = now + TOTAL;
@@ -149,24 +148,17 @@
     var endTime = getEndTime();
 
     function tick() {
-        var now       = Math.floor(Date.now() / 1000);
+        var now = Math.floor(Date.now() / 1000);
         var remaining = endTime - now;
-
         if (remaining <= 0) {
-            endTime = Math.floor(Date.now() / 1000) + TOTAL;
+            endTime = now + TOTAL;
             localStorage.setItem(KEY, endTime);
             remaining = TOTAL;
         }
-
-        var d = Math.floor(remaining / 86400);
-        var h = Math.floor((remaining % 86400) / 3600);
-        var m = Math.floor((remaining % 3600) / 60);
-        var s = remaining % 60;
-
-        daysEl.textContent  = pad(d);
-        hoursEl.textContent = pad(h);
-        minEl.textContent   = pad(m);
-        secEl.textContent   = pad(s);
+        daysEl.textContent  = pad(Math.floor(remaining / 86400));
+        hoursEl.textContent = pad(Math.floor((remaining % 86400) / 3600));
+        minEl.textContent   = pad(Math.floor((remaining % 3600) / 60));
+        secEl.textContent   = pad(remaining % 60);
     }
 
     tick();
