@@ -1,8 +1,8 @@
 @props([
     'ctaHref' => '#',
     'ctaText' => 'Reserve My Seat @₹49',
-    'days'    => 4,
-    'hours'   => 0,
+    'days'    => 0,
+    'hours'   => 4,
     'minutes' => 0,
     'seconds' => 0,
 ])
@@ -21,16 +21,6 @@
 
             {{-- Timer boxes --}}
             <div class="flex items-end gap-1">
-                {{-- Days --}}
-                <div class="flex flex-col items-center gap-0.5">
-                    <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
-                        <span id="sb-days" class="text-neutral-i font-bold text-base md:text-2xl leading-none tabular-nums">--</span>
-                    </div>
-                    <span class="text-neutral-b text-[9px] md:text-xs font-medium leading-none">Days</span>
-                </div>
-
-                <span class="text-neutral-b font-bold text-base md:text-2xl mb-3 leading-none">:</span>
-
                 {{-- Hours --}}
                 <div class="flex flex-col items-center gap-0.5">
                     <div class="bg-neutral-b rounded-md px-1.5 md:px-3 py-1 md:py-2 min-w-[36px] md:min-w-[56px] text-center">
@@ -79,7 +69,6 @@
     // Key includes TOTAL so changing days/hours in props resets timer for all visitors
     var KEY = 'sb_timer_end_' + TOTAL;
 
-    var elD = document.getElementById('sb-days');
     var elH = document.getElementById('sb-hours');
     var elM = document.getElementById('sb-mins');
     var elS = document.getElementById('sb-secs');
@@ -108,7 +97,6 @@
             localStorage.setItem(KEY, endTime);
             remaining = TOTAL;
         }
-        elD.textContent = pad(Math.floor(remaining / 86400));
         elH.textContent = pad(Math.floor((remaining % 86400) / 3600));
         elM.textContent = pad(Math.floor((remaining % 3600) / 60));
         elS.textContent = pad(remaining % 60);

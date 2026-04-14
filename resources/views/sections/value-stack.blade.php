@@ -18,7 +18,7 @@
         ['icon' => 'Pdf notes.svg', 'label' => 'PDF Notes'],
         ['icon' => 'Live Q&A.svg', 'label' => 'Live Q&A Access'],
     ],
-    'countdown' => ['days' => '04', 'hours' => '00', 'min' => '00', 'sec' => '00'],
+    'countdown' => ['days' => '00', 'hours' => '04', 'min' => '00', 'sec' => '00'],
     'bgImage' => 'images/graphology image/value.webp',
     'bgImageMobile' => 'images/graphology image/value stack.webp',
 ])
@@ -82,12 +82,6 @@
                             <div class="flex items-center justify-center md:justify-start gap-3 md:gap-4 flex-wrap">
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
-                                        <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-days">--</span>
-                                    </div>
-                                    <span class="text-sm mt-2 font-bold text-button-gradient">Days</span>
-                                </div>
-                                <div class="flex flex-col items-center">
-                                    <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
                                         <span class="text-2xl font-bold text-white md:text-neutral-b" id="countdown-hours">--</span>
                                     </div>
                                     <span class="text-sm mt-2 font-bold text-button-gradient">Hour</span>
@@ -115,12 +109,11 @@
 <div id="countdown-initial" data-days="{{ $countdown['days'] }}" data-hours="{{ $countdown['hours'] }}" data-min="{{ $countdown['min'] }}" data-sec="{{ $countdown['sec'] }}" class="hidden"></div>
 <script defer>
 (function() {
-    var daysEl  = document.getElementById('countdown-days');
     var hoursEl = document.getElementById('countdown-hours');
     var minEl   = document.getElementById('countdown-min');
     var secEl   = document.getElementById('countdown-sec');
     var initEl  = document.getElementById('countdown-initial');
-    if (!daysEl || !hoursEl || !minEl || !secEl || !initEl) return;
+    if (!hoursEl || !minEl || !secEl || !initEl) return;
 
     var d0 = parseInt(initEl.dataset.days,  10) || 0;
     var h0 = parseInt(initEl.dataset.hours, 10) || 0;
@@ -155,7 +148,6 @@
             localStorage.setItem(KEY, endTime);
             remaining = TOTAL;
         }
-        daysEl.textContent  = pad(Math.floor(remaining / 86400));
         hoursEl.textContent = pad(Math.floor((remaining % 86400) / 3600));
         minEl.textContent   = pad(Math.floor((remaining % 3600) / 60));
         secEl.textContent   = pad(remaining % 60);
