@@ -78,7 +78,7 @@
                             </ul>
                         </div>
                         <div class="w-full">
-                            <h3 class="text-subheading font-bold text-button-gradient text-center md:text-left mb-6">Registration Closes in 52 Minutes!</h3>
+                            <h3 class="text-subheading font-bold text-button-gradient text-center md:text-left mb-6">Early Bird Offer Ends In:</h3>
                             <div class="flex items-center justify-center md:justify-start gap-3 md:gap-4 flex-wrap">
                                 <div class="flex flex-col items-center">
                                     <div class="w-16 h-16 flex items-center justify-center rounded-lg border-2 border-white/80 bg-black/30 md:bg-white md:border-transparent md:shadow-md">
