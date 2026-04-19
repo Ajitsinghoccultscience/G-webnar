@@ -35,7 +35,7 @@
         <div class="lg:hidden flex flex-col gap-4 mb-6">
             <div>
                 <h1 class="text-lg font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
-                <p class="text-xs text-gray-500">Sun, 19th April 2026 &nbsp;·&nbsp; 02:00 PM – 05:00 PM IST</p>
+                <p class="text-xs text-gray-500">Sun, 26th April 2026 &nbsp;·&nbsp; 12:00 PM – 2:00 PM IST</p>
             </div>
             <div class="border-t border-gray-200"></div>
             <div class="flex items-center gap-4">
@@ -67,7 +67,7 @@
             <div class="hidden lg:flex flex-col gap-7">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
-                    <p class="text-sm text-gray-500">Sun, 19th April 2026 &nbsp;·&nbsp; 02:00 PM – 05:00 PM IST</p>
+                    <p class="text-sm text-gray-500">Sun, 26th April 2026 &nbsp;·&nbsp; 12:00 PM – 2:00 PM IST</p>
                 </div>
                 <div class="border-t border-gray-200"></div>
                 <div class="flex items-center gap-4">

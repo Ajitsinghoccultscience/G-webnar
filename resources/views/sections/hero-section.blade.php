@@ -7,8 +7,8 @@
         'Suggest the right changes in their writing and signature for improvements.',
         'Tell if someone is faking their inner and outer personality.',
     ],
-    'date' => 'Sun, 19 April, 2026',
-    'time' => '02:00 PM - 05:00 PM',
+    'date' => 'Sun, 26 April, 2026',
+    'time' => '12:00 PM - 2:00 PM',
     'duration' => '2 hours',
     'alumniCount' => '18k+',
     'rating' => '4.5/5 (8912 ratings)',
@@ -26,7 +26,7 @@ $iconsPath = 'images/icons';
     <div class="flex animate-marquee w-max gap-16">
         @foreach(range(1, 4) as $i)
             <a href="{{ url('/checkout') }}" class="text-neutral-b font-semibold text-xs md:text-sm tracking-wide whitespace-nowrap hover:underline">
-                🎯 Join Early Bird Discounted Webinar &nbsp;|&nbsp; Reserve Your Seat Now @₹49 Only!
+                Join Early Bird Discounted Webinar &nbsp;|&nbsp; Reserve Your Seat Now @₹49 Only!
             </a>
         @endforeach
     </div>
