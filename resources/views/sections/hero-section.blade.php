@@ -104,7 +104,7 @@ $ratingCount = $ratingParts[1] ?? '';
             <img src="{{ asset($iconsPath.'/duration.svg') }}" class="w-4 h-4 shrink-0">
             <p class="text-xs text-neutral-i/80 uppercase font-semibold tracking-wide">Duration</p>
         </div>
-        <p class="font-bold text-accent-gold-light text-sm">3 Hours Live Webinar</p>
+        <p class="font-bold text-accent-gold-light text-sm">2 Hours Live Webinar</p>
     </div>
     <div class="border border-white/40 rounded-xl p-3 flex flex-col gap-1">
         <div class="flex items-center gap-2">
@@ -160,7 +160,7 @@ $ratingCount = $ratingParts[1] ?? '';
             <img src="{{ asset($iconsPath.'/duration.svg') }}" class="w-4 h-4 shrink-0">
             <p class="text-xs text-neutral-i/80 uppercase font-semibold tracking-wide">Duration</p>
         </div>
-        <p class="font-bold text-accent-gold-light text-base">3 Hours Live Webinar</p>
+        <p class="font-bold text-accent-gold-light text-base">2 Hours Live Webinar</p>
     </div>
     <div class="border border-white/40 rounded-xl p-4 flex flex-col gap-1">
         <div class="flex items-center gap-2">
