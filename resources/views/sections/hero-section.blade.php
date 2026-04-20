@@ -8,7 +8,7 @@
         'Tell if someone is faking their inner and outer personality.',
     ],
     'date' => 'Sun, 26 April, 2026',
-    'time' => '12:00 PM - 2:00 PM',
+    'time' => '1:00 PM - 3:00 PM',
     'duration' => '2 hours',
     'alumniCount' => '18k+',
     'rating' => '4.5/5 (8912 ratings)',
