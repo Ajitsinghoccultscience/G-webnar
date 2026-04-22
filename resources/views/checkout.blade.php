@@ -37,28 +37,6 @@
                 <h1 class="text-lg font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
                 <p class="text-xs text-gray-500">Sun, 26th April 2026 &nbsp;·&nbsp; 1:00 PM – 3:00 PM IST</p>
             </div>
-            <div class="border-t border-gray-200"></div>
-            <div class="flex items-center gap-4">
-                <div class="w-14 h-14 rounded-full shrink-0 overflow-hidden border border-gray-200 bg-gray-100">
-                    <img src="{{ asset('images/assets%20desktop/pawan%20kumar.png') }}"
-                         alt="Pawan Kumar" loading="lazy"
-                         class="w-full h-full object-cover" style="object-position:50% 0%;">
-                </div>
-                <div>
-                    <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-0.5">Your Trainer</p>
-                    <h3 class="text-sm font-bold text-gray-900">Pawan Kumar</h3>
-                    <p class="text-xs text-gray-500">Graphologist · All India Institute of Occult Science</p>
-                </div>
-            </div>
-            <div class="flex items-center gap-3">
-                <div class="flex -space-x-2">
-                    <img src="{{ asset('images/assets%20desktop/Aryan_Mehta.avif') }}"  loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                    <img src="{{ asset('images/assets%20desktop/Priya_Sharma.avif') }}" loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                    <img src="{{ asset('images/assets%20desktop/Rishika.avif') }}"      loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                    <img src="{{ asset('images/assets%20desktop/Vikram_Singh.avif') }}" loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                </div>
-                <p class="text-sm text-gray-500"><span class="font-bold text-gray-800">18,000+ alumni</span> have trained with us</p>
-            </div>
         </div>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
@@ -68,29 +46,6 @@
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
                     <p class="text-sm text-gray-500">Sun, 26th April 2026 &nbsp;·&nbsp; 1:00 PM – 3:00 PM IST</p>
-                </div>
-                <div class="border-t border-gray-200"></div>
-                <div class="flex items-center gap-4">
-                    <div class="w-16 h-16 rounded-full shrink-0 overflow-hidden border border-gray-200 bg-gray-100">
-                        <img src="{{ asset('images/assets%20desktop/pawan%20kumar.png') }}"
-                             alt="Pawan Kumar" loading="lazy"
-                             class="w-full h-full object-cover" style="object-position:50% 0%;">
-                    </div>
-                    <div>
-                        <p class="text-xs font-bold uppercase tracking-widest text-gray-400 mb-0.5">Your Trainer</p>
-                        <h3 class="text-sm font-bold text-gray-900">Pawan Kumar</h3>
-                        <p class="text-xs text-gray-500">Graphologist · All India Institute of Occult Science</p>
-                        <p class="text-xs text-gray-400 mt-1">BSc Mathematics + Master's in Psychology — Handwriting analysis &amp; signature expert.</p>
-                    </div>
-                </div>
-                <div class="flex items-center gap-3">
-                    <div class="flex -space-x-2">
-                        <img src="{{ asset('images/assets%20desktop/Aryan_Mehta.avif') }}"  loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                        <img src="{{ asset('images/assets%20desktop/Priya_Sharma.avif') }}" loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                        <img src="{{ asset('images/assets%20desktop/Rishika.avif') }}"      loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                        <img src="{{ asset('images/assets%20desktop/Vikram_Singh.avif') }}" loading="lazy" class="w-8 h-8 rounded-full border-2 border-white object-cover" alt="">
-                    </div>
-                    <p class="text-sm text-gray-500"><span class="font-bold text-gray-800">18,000+ alumni</span> have trained with us</p>
                 </div>
             </div>
 
