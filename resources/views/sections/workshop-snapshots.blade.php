@@ -2,8 +2,8 @@
     'title' => "Last workshop's snapshots",
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'images' => [
-        'images/Untitled-1.webp',
-        'images/Untitled-2.webp',
+        'images/Screenshot 2026-04-19 at 2.34.38 PM.webp',
+         'images/Screenshot 2026-04-19 at 2.34.48 PM.webp',
     ],
 ])
 

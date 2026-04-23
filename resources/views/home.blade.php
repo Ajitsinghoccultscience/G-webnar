@@ -27,7 +27,7 @@
     @include('sections.what-you-will-learn')
     @include('sections.how-graphology-works', ['bonusCtaHref' => url('/checkout')])
     @include('sections.certificate-section', ['ctaHref' => url('/checkout')])
-    @include('sections.workshop-snapshots', ['images' => ['images/12.webp', 'images/13.webp']])
+    @include('sections.workshop-snapshots', ['images' => ['images/Screenshot 2026-04-19 at 2.34.38 PM.webp', 'images/Screenshot 2026-04-19 at 2.34.48 PM.webp']])
     @include('sections.graphology-steps')
     @include('sections.who-uses-graphology')
     @include('sections.video-testimonials')
