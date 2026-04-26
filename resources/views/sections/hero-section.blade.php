@@ -7,7 +7,7 @@
         'Suggest the right changes in their writing and signature for improvements.',
         'Tell if someone is faking their inner and outer personality.',
     ],
-    'date' => 'Sun, 26 April, 2026',
+    'date' => 'Sat, 3 May, 2026',
     'time' => '1:00 PM - 3:00 PM',
     'duration' => '2 hours',
     'alumniCount' => '18k+',
