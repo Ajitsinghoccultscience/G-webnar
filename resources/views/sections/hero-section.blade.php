@@ -1,13 +1,13 @@
 @props([
-    'title' => 'MEGA GRAPHOLOGY WEBINAR',
-    'subtitle' => "Enroll in the best graphology course to predict someone's personality using their signature and way of writing.",
+    'title' => 'Live graphology webinar - master the art of handwriting analysis. ',
+    'subtitle' => "A 2-hour session covering personality reading, signature analysis and graphotherapy - conducted by all India Institute of occult science.",
     'bullets' => [
-        'Analysis of various signature styles.',
-        "Able to predict someone's personality by their handwriting",
-        'Suggest the right changes in their writing and signature for improvements.',
-        'Tell if someone is faking their inner and outer personality.',
+        'Learn to read anyone's personality,emotions, and hidden traits through their handwriting.',
+        "Analyze signature style to understand what a person's subconscious reveals. ",
+        ' Application of graphology - suggest the right changes in writing. ',
+        'Spot the gap between who someone claims to be and who they actually are.',
     ],
-    'date' => 'Sun, 3 May, 2026',
+    'date' => 'Sat, 9 May, 2026',
     'time' => '1:00 PM - 3:00 PM',
     'duration' => '2 hours',
     'alumniCount' => '18k+',
@@ -26,7 +26,8 @@ $iconsPath = 'images/icons';
     <div class="flex animate-marquee w-max gap-16">
         @foreach(range(1, 4) as $i)
             <a href="{{ url('/checkout') }}" class="text-neutral-b font-semibold text-xs md:text-sm tracking-wide whitespace-nowrap hover:underline">
-                Join Early Bird Discounted Webinar &nbsp;|&nbsp; Reserve Your Seat Now @₹49 Only!
+                                             offer ends soon - enroll now with just ₹49 <span class="line-through opacity-70">₹199</span>
+
             </a>
         @endforeach
     </div>
