@@ -1,22 +1,19 @@
-@props([
-    'title' => 'Live graphology webinar - master the art of handwriting analysis. ',
-    'subtitle' => "A 2-hour session covering personality reading, signature analysis and graphotherapy - conducted by all India Institute of occult science.",
-    'bullets' => [
-        'Learn to read anyone's personality,emotions, and hidden traits through their handwriting.',
-        "Analyze signature style to understand what a person's subconscious reveals. ",
-        ' Application of graphology - suggest the right changes in writing. ',
-        'Spot the gap between who someone claims to be and who they actually are.',
-    ],
-    'date' => 'Sat, 9 May, 2026',
-    'time' => '1:00 PM - 3:00 PM',
-    'duration' => '2 hours',
-    'alumniCount' => '18k+',
-    'rating' => '4.5/5 (8912 ratings)',
-    'videoPlaceholder' => 'images/assets desktop/convo graphology1.webp',
-    'ctaHref' => '#',
-])
-
 @php
+$title = $title ?? 'Live graphology webinar ';
+$subtitle = $subtitle ?? 'A 2-hour session covering personality reading, signature analysis and graphotherapy - conducted by all India Institute of occult science.';
+$bullets = $bullets ?? [
+    'Learn to read anyone\'s personality,emotions, and hidden traits through their handwriting.',
+    "Analyze signature style to understand what a person's subconscious reveals. ",
+    ' Application of graphology - suggest the right changes in writing. ',
+    'Spot the gap between who someone claims to be and who they actually are.',
+];
+$date = $date ?? 'Sat, 9 May, 2026';
+$time = $time ?? '1:00 PM - 3:00 PM';
+$duration = $duration ?? '2 hours';
+$alumniCount = $alumniCount ?? '18k+';
+$rating = $rating ?? '4.5/5 (8912 ratings)';
+$videoPlaceholder = $videoPlaceholder ?? 'images/assets desktop/convo graphology1.webp';
+$ctaHref = $ctaHref ?? '#';
 $iconsPath = 'images/icons';
 @endphp
 
@@ -38,8 +35,8 @@ $iconsPath = 'images/icons';
 
 <div class="max-w-[1400px] mx-auto section-px py-5 xl:py-10 transition-[padding,gap,max-width] duration-300 ease-in-out">
 
-{{-- MOBILE & TABLET (1024px): Stacked layout --}}
-<div class="flex flex-col gap-6 xl:hidden transition-all duration-300 ease-in-out">
+{{-- MOBILE & TABLET: Stacked layout --}}
+<div class="flex flex-col gap-6 lg:hidden transition-all duration-300 ease-in-out">
 {{-- Badge --}}
 <div class="flex justify-center">
     <div class="flex items-center gap-2 px-4 py-1.5 rounded-full shadow-md bg-white">
@@ -121,8 +118,8 @@ $ratingCount = $ratingParts[1] ?? '';
 </x-ui.button>
 </div>
 
-{{-- DESKTOP (1280px+): 2-column layout --}}
-<div class="hidden xl:flex flex-col gap-6 transition-all duration-300 ease-in-out">
+{{-- DESKTOP (1024px+): 2-column layout --}}
+<div class="hidden lg:flex flex-col gap-6 transition-all duration-300 ease-in-out">
 {{-- Badge centered above both columns --}}
 <div class="flex justify-center">
     <div class="flex items-center gap-3 px-5 py-2.5 rounded-full shadow-md bg-white">
