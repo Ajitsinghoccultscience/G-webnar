@@ -7,16 +7,14 @@ $bullets = $bullets ?? [
     ' Application of graphology - suggest the right changes in writing. ',
     'Spot the gap between who someone claims to be and who they actually are.',
 ];
-$date = $date ?? 'Sat, 9 May, 2026';
+$date = $date ?? 'Wed, 13 May, 2026';
 $time = $time ?? '1:00 PM - 3:00 PM';
 $duration = $duration ?? '2 hours';
 $alumniCount = $alumniCount ?? '18k+';
 $rating = $rating ?? '4.5/5 (8912 ratings)';
 $videoPlaceholder = $videoPlaceholder ?? 'images/assets desktop/convo graphology1.webp';
 $ctaHref = $ctaHref ?? '#';
-$iconsPath = 'images/icons';
-@endphp
-
+$iconsPath = 'images/icons';v  
 
 {{-- Top Cream Marquee Bar --}}
 <div class="w-full bg-accent-cream overflow-hidden py-1.5">
