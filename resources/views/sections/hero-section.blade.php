@@ -14,8 +14,8 @@ $alumniCount = $alumniCount ?? '18k+';
 $rating = $rating ?? '4.5/5 (8912 ratings)';
 $videoPlaceholder = $videoPlaceholder ?? 'images/assets desktop/convo graphology1.webp';
 $ctaHref = $ctaHref ?? '#';
-$iconsPath = 'images/icons';v  
-
+$iconsPath = 'images/icons';
+@endphp
 {{-- Top Cream Marquee Bar --}}
 <div class="w-full bg-accent-cream overflow-hidden py-1.5">
     <div class="flex animate-marquee w-max gap-16">
