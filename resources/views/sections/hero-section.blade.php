@@ -8,7 +8,7 @@ $bullets = $bullets ?? [
     'Spot the gap between who someone claims to be and who they actually are.',
 ];
 $date = $date ?? 'Wed, 13 May, 2026';
-$time = $time ?? '1:00 PM - 3:00 PM';
+$time = $time ?? '11:00 AM - 1:00 PM';
 $duration = $duration ?? '2 hours';
 $alumniCount = $alumniCount ?? '18k+';
 $rating = $rating ?? '4.5/5 (8912 ratings)';
