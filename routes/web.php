@@ -23,6 +23,6 @@ Route::prefix('admin')->name('admin.')->group(function () {
     Route::middleware('admin')->group(function () {
         Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('dashboard');
         Route::patch('/settings', [AdminController::class, 'update'])->name('update');
-        Route::delete('/logout', [AdminController::class, 'logout'])->name('logout');
+        Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
     });
 });
