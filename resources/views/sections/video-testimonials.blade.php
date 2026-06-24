@@ -2,7 +2,7 @@
     'title' => 'Hear straight from our Alumni',
     'underlineSvg' => 'images/graphology image/underline 9.svg',
     'videos' => [
-        ['youtube_id' => 'SMImDRJrCY0', 'name' => 'Alumni Review', 'attend_date' => ''],
+      
         ['youtube_id' => 'RI637QVE648', 'name' => 'Alumni Review', 'attend_date' => ''],
         ['youtube_id' => 'mEcnaSkIVfY', 'name' => 'Alumni Review', 'attend_date' => ''],
         ['youtube_id' => 'GW4WpHXgb_4', 'name' => 'Alumni Review', 'attend_date' => ''],
