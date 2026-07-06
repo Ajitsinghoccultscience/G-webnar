@@ -7,8 +7,8 @@ $bullets = $bullets ?? [
     ' Application of graphology - suggest the right changes in writing. ',
     'Spot the gap between who someone claims to be and who they actually are.',
 ];
-$date = $date ?? $webinarDate ?? 'Wed, 17 June, 2026';
-$time = $time ?? '11:00 AM - 1:00 PM';
+$date = $date ?? $webinarDate ?? 'Saturday, 11th July, 2026';
+$time = $time ?? $webinarTime ?? '7:00 PM - 9:00 PM';
 $duration = $duration ?? '2 hours';
 $alumniCount = $alumniCount ?? '18k+';
 $rating = $rating ?? '4.5/5 (8912 ratings)';

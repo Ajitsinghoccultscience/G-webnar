@@ -2,7 +2,7 @@
 @section('title', 'Dashboard')
 @section('sidebar')@endsection
 @section('page-title', 'Webinar Settings')
-@section('page-subtitle', 'Update date and WhatsApp link across the entire website')
+@section('page-subtitle', 'Update date, time and WhatsApp link across the entire website')
 
 @section('content')
 
@@ -46,17 +46,27 @@
                     </svg>
                 </div>
                 <div>
-                    <p class="font-semibold text-sm text-neutral-a">Webinar Date</p>
+                    <p class="font-semibold text-sm text-neutral-a">Webinar Date & Time</p>
                     <p class="text-xs text-gray-400">Updates hero section &amp; checkout page</p>
                 </div>
             </div>
-            <div class="flex flex-col gap-1.5">
-                <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Date text</label>
-                <input type="text" name="webinar_date"
-                    value="{{ old('webinar_date', $webinarDate) }}"
-                    placeholder="e.g. Wed, 24 June, 2026"
-                    required
-                    class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-neutral-a placeholder-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-neutral-a/15 focus:border-neutral-a transition-all">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Date text</label>
+                    <input type="text" name="webinar_date"
+                        value="{{ old('webinar_date', $webinarDate) }}"
+                        placeholder="e.g. Saturday, 11th July, 2026"
+                        required
+                        class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-neutral-a placeholder-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-neutral-a/15 focus:border-neutral-a transition-all">
+                </div>
+                <div class="flex flex-col gap-1.5">
+                    <label class="text-xs font-semibold text-gray-500 uppercase tracking-wide">Time text</label>
+                    <input type="text" name="webinar_time"
+                        value="{{ old('webinar_time', $webinarTime) }}"
+                        placeholder="e.g. 7:00 PM - 9:00 PM"
+                        required
+                        class="w-full border border-gray-200 rounded-xl px-4 py-3 text-sm text-neutral-a placeholder-gray-300 bg-gray-50 focus:outline-none focus:ring-2 focus:ring-neutral-a/15 focus:border-neutral-a transition-all">
+                </div>
             </div>
         </div>
 
@@ -92,6 +102,10 @@
                     <p class="font-bold text-neutral-a text-xs" id="preview-date">{{ $webinarDate }}</p>
                 </div>
                 <div class="bg-white rounded-xl p-3 border border-amber-100">
+                    <p class="text-[11px] text-gray-400 uppercase font-semibold tracking-wide mb-1">Time</p>
+                    <p class="font-bold text-neutral-a text-xs" id="preview-time">{{ $webinarTime }}</p>
+                </div>
+                <div class="bg-white rounded-xl p-3 border border-amber-100">
                     <p class="text-[11px] text-gray-400 uppercase font-semibold tracking-wide mb-1">WhatsApp</p>
                     <p class="font-bold text-[#25D366] text-xs truncate" id="preview-wa">{{ $whatsappLink ? 'Link set' : 'Not set' }}</p>
                 </div>
@@ -109,6 +123,9 @@
 <script>
     document.querySelector('[name=webinar_date]').addEventListener('input', function () {
         document.getElementById('preview-date').textContent = this.value || '–';
+    });
+    document.querySelector('[name=webinar_time]').addEventListener('input', function () {
+        document.getElementById('preview-time').textContent = this.value || '–';
     });
     document.querySelector('[name=whatsapp_link]').addEventListener('input', function () {
         document.getElementById('preview-wa').textContent = this.value ? 'Link set' : 'Not set';

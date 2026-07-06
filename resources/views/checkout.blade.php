@@ -35,7 +35,7 @@
         <div class="lg:hidden flex flex-col gap-4 mb-6">
             <div>
                 <h1 class="text-lg font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
-                <p class="text-xs text-gray-500">{{ $webinarDate ?? 'Wed, 17 June, 2026' }} &nbsp;·&nbsp; 11:00 AM – 1:00 PM IST</p>
+                <p class="text-xs text-gray-500">{{ $webinarDate ?? 'Saturday, 11th July, 2026' }} &nbsp;·&nbsp; {{ $webinarTime ?? '7:00 PM - 9:00 PM' }} IST</p>
             </div>
         </div>
 
@@ -45,7 +45,7 @@
             <div class="hidden lg:flex flex-col gap-7">
                 <div>
                     <h1 class="text-2xl font-bold text-gray-900 mb-1">Mega Graphology Webinar</h1>
-                    <p class="text-sm text-gray-500">{{ $webinarDate ?? 'Wed, 17 June, 2026' }} &nbsp;·&nbsp; 11:00 AM – 1:00 PM IST</p>
+                    <p class="text-sm text-gray-500">{{ $webinarDate ?? 'Saturday, 11th July, 2026' }} &nbsp;·&nbsp; {{ $webinarTime ?? '7:00 PM - 9:00 PM' }} IST</p>
                 </div>
             </div>
 

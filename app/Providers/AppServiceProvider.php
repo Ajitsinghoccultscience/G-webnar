@@ -18,7 +18,8 @@ class AppServiceProvider extends ServiceProvider
         View::composer(['sections.hero-section', 'checkout', 'thankyou'], function ($view) {
             try {
                 $view->with([
-                    'webinarDate'  => Setting::get('webinar_date', 'Wed, 17 June, 2026'),
+                    'webinarDate'  => Setting::get('webinar_date', 'Saturday, 11th July, 2026'),
+                    'webinarTime'  => Setting::get('webinar_time', '7:00 PM - 9:00 PM'),
                     'whatsappLink' => Setting::get('whatsapp_link', 'https://chat.whatsapp.com/Bgz3Vhf7xAZDW4gO3xVlCr'),
                 ]);
             } catch (\Exception $e) {
