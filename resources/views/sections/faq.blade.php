@@ -18,10 +18,7 @@
             'question' => 'Can I identify criminal behavior through this course?',
             'answer' => " Yes. The curriculum includes studying the writing patterns of both criminals and non-criminals. You will learn to spot signs of deviance, aggression, and instability to build comprehensive psychological portraits.",
         ],
-        [
-            'question' => 'Will I receive a certificate for attending?',
-            'answer' => "Yes. After attending the live webinar, you will receive a Certificate of Participation from the All India Institute of Occult Science, which can be utilized for both personal and professional advancement.",
-        ],
+     
     ],
 ])
 
