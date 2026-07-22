@@ -10,7 +10,7 @@
     'totalValue' => '₹999',
     'offerPrice' => '₹49',
     'originalPrice' => '₹999',
-    'ctaText' => 'Register Now',
+    'ctaText' => 'Register For Free',
     'ctaHref' => '#',
     'iconsPath' => 'images/Graphology (logo)/untitled folder 3',
     'bonusItems' => [
@@ -55,7 +55,7 @@
                             </div>
                             <div class="mt-10 flex justify-center">
                                 <x-ui.button :href="$ctaHref" variant="primary" :fullWidth="true" class="!min-w-0 !text-neutral-b !py-4 !px-8 rounded-lg md:!w-auto">
-                                    {{ $ctaText }} &#64;{{ $offerPrice }} <span class="line-through opacity-90 ml-1">{{ $originalPrice }}</span>
+                                    {{ $ctaText }}
                                 </x-ui.button>
                             </div>
                         </x-ui.card>

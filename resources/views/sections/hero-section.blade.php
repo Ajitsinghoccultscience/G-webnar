@@ -21,7 +21,7 @@ $iconsPath = 'images/icons';
     <div class="flex animate-marquee w-max gap-16">
         @foreach(range(1, 4) as $i)
             <a href="{{ url('/checkout') }}" class="text-neutral-b font-semibold text-xs md:text-sm tracking-wide whitespace-nowrap hover:underline">
-                                             offer ends soon - enroll now with just ₹49 <span class="line-through opacity-70">₹199</span>
+                                             limited free seats - register now for free
 
             </a>
         @endforeach
@@ -112,7 +112,7 @@ $ratingCount = $ratingParts[1] ?? '';
 </div>
 
 <x-ui.button :href="$ctaHref" variant="primary" class="w-full !py-4 !text-base font-bold">
-    Reserve My Seat @₹49 <span class="line-through opacity-80 ml-1">₹999</span>
+    Reserve My Free Seat
 </x-ui.button>
 </div>
 
@@ -168,7 +168,7 @@ $ratingCount = $ratingParts[1] ?? '';
 </div>
 
 <x-ui.button :href="$ctaHref" variant="primary" class="!py-4 !text-base font-bold !min-w-0">
-    Reserve My Seat @₹49 <span class="line-through opacity-80 ml-1">₹999</span>
+    Reserve My Free Seat
 </x-ui.button>
 </div>
 {{-- RIGHT SIDE --}}
