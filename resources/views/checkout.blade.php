@@ -57,7 +57,7 @@
                         src="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/G5-sJzQY1LJXGwjhhOK6RpOrPD680Uc6NMOQhg1Yv88"
                         frameborder="0"
                         scrolling="no"
-                        style="height:850px;width:100%;border:none;display:block;overflow:hidden;"
+                        style="height:1150px;width:100%;border:none;display:block;overflow:hidden;"
                         class="md:!h-[1100px]"
                         title="Webinar Registration Form"
                     ></iframe>
