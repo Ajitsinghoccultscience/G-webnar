@@ -9,6 +9,20 @@
     {{-- GTM: only initialise dataLayer here — script loads after window load --}}
     <script>window.dataLayer = window.dataLayer || [];</script>
 
+    {{-- Capture the URL the visitor first landed on (with UTM/query params + referrer)
+         so it can be sent to Zoho on checkout, even after they browse between pages --}}
+    <script>
+    (function () {
+        try {
+            if (!sessionStorage.getItem('landing_url')) {
+                var landingUrl = window.location.href;
+                if (document.referrer) landingUrl += ' | Referrer: ' + document.referrer;
+                sessionStorage.setItem('landing_url', landingUrl);
+            }
+        } catch (e) {}
+    })();
+    </script>
+
     <title>@yield('title', config('app.name'))</title>
     <meta name="description" content="@yield('description', 'Webnar - Your platform for webinars and live events.')">
 

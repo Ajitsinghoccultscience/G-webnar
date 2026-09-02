@@ -54,7 +54,8 @@
                 <div class="bg-white rounded-2xl border border-gray-200 shadow-sm overflow-hidden">
                     <iframe
                         id="zoho-form-iframe"
-                        src="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/G5-sJzQY1LJXGwjhhOK6RpOrPD680Uc6NMOQhg1Yv88"
+                        src=""
+                        data-base-src="https://forms.zohopublic.in/allindiainstituteofoccultsci1/form/MegaWebnar/formperma/G5-sJzQY1LJXGwjhhOK6RpOrPD680Uc6NMOQhg1Yv88"
                         frameborder="0"
                         scrolling="no"
                         style="height:1150px;width:100%;border:none;display:block;overflow:hidden;"
@@ -83,6 +84,19 @@ document.addEventListener('DOMContentLoaded', function () {
     var THANK_YOU_URL = '{{ url("/thankyou") }}';
     var redirected = false;
     if (!iframe) return;
+
+    // Prefill the hidden "Page Path URL" field in the Zoho form (alias:
+    // utm_content, set under Field Alias - Prefill URL) with the URL the
+    // visitor first landed on (falls back to the current page URL).
+    var ZOHO_FULL_URL_FIELD_NAME = 'utm_content';
+    var fullUrl = window.location.href;
+    if (document.referrer) fullUrl += ' | Referrer: ' + document.referrer;
+    try {
+        var landingUrl = sessionStorage.getItem('landing_url');
+        if (landingUrl) fullUrl = landingUrl;
+    } catch (e) {}
+    var baseSrc = iframe.getAttribute('data-base-src');
+    iframe.src = baseSrc + '?' + encodeURIComponent(ZOHO_FULL_URL_FIELD_NAME) + '=' + encodeURIComponent(fullUrl);
 
     function doRedirect() {
         if (redirected) return;
